@@ -1,0 +1,24 @@
+.notification {
+    padding: 1rem;
+    cursor: pointer;
+    transition: all $short-fade;
+    &:hover {
+        background-color: $accent;
+    }
+    &--unread {
+        background-color: $sand3;
+    }
+}
+
+
+/*
+.notification {
+    display: block;
+    color: $off-white;
+    border-radius: $border-small;
+    border: 1px solid $error;
+    padding: 1rem;
+        &.error { background-color: $error; }
+        &.success { background-color: $body-medium; }
+}
+*/

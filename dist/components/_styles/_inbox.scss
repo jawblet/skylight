@@ -1,0 +1,57 @@
+//display previews of library posts
+.inbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $sand3;
+    border-radius: $border-small;
+    background-color: $sand;
+    padding: 1rem;
+}
+
+.inboxPreview {
+    margin-bottom: 0.5rem;
+    border: 1px solid $shadow;
+    border-radius: $border-smallest;
+    background-color: $sand2;
+    padding: 0.5rem;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__text {
+        flex: 0 0 95%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        white-space:nowrap; 
+        position: relative;
+    }
+    &__subject {
+        font-weight: bold;
+    }
+    &__body {
+        color: $body-light;         
+        //text-overflow: ellipsis; // would not work 
+    }
+    &__fade {
+        position: absolute;
+        height: 100%;
+        width: 3rem;
+        right: 0;
+        z-index: 1;
+        background:linear-gradient(to right, transparent, $sand2);
+    }
+    &__X {
+        flex: 0 0 5%;
+        position: absolute;
+        right: 1rem;
+        top: 50%; 
+        transform: translateY(-50%);
+        z-index: 3; // position above link 
+    }
+}
+
+

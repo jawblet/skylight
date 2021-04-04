@@ -1,0 +1,17 @@
+.tag {
+    position: relative;
+    background-color: $sand;
+    border-radius: $border-small;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    transition: all $short-fade; 
+    break-inside: avoid;
+    &__X { 
+        font-size: 0.9rem; 
+        color: $body-light;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+}

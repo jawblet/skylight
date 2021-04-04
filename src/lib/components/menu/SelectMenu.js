@@ -1,9 +1,9 @@
 import React from 'react'; 
 import Rolldown from '../animate/Rolldown';
 import Drawer from '../Drawer';
-import useDetectClickOut from '../../../hooks/useDetectClickOut';
-import useSelectOne from '../../../hooks/useSelectOne';
 import MenuItem from './MenuItem';
+import useDetectClickOut from '../_hooks/useDetectClickOut';
+import useSelectOne from '../_hooks/useSelectOne';
 
 const SelectMenu = ( { allItems, initValue} ) => {
     const { show, setShow, nodeRef, triggerRef } = useDetectClickOut(false);

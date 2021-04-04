@@ -11,7 +11,7 @@ var _IconButton = _interopRequireDefault(require("../btn/IconButton"));
 
 var _SelectMenu = _interopRequireDefault(require("../menu/SelectMenu"));
 
-var _data = require("../../data");
+var _data = require("../_data/data");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

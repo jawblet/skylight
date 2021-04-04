@@ -1,0 +1,33 @@
+//https://codepen.io/ahmzyjazzy/pen/YzqONbo?editors=0100
+
+@keyframes placeHolderShimmer {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: -468px 0
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    will-change: transform;
+    animation: placeHolderShimmer 3s linear infinite forwards;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: $shadow;
+    background: linear-gradient(90deg, $shadow 8%, $body-lightest 18%, $shadow 33%);
+    background-size: 800px 104px;
+    height: 100%;
+    position: relative;
+}
+
+.loading {
+    width: 30%;
+    max-width: 15rem;
+    height: 5%;
+    max-height: 1.5rem;
+}

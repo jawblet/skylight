@@ -1,7 +1,7 @@
 import React from 'react'; 
 import IconButton from '../btn/IconButton';
 import SelectMenu from '../menu/SelectMenu'; 
-import { HEADINGS, INLINE_STYLES, BLOCK_TYPES } from '../../data';
+import { HEADINGS, INLINE_STYLES, BLOCK_TYPES } from '../_data/data';
 
 export default function Toolbar(props) {
   const currentInlineStyle = props.editorState.getCurrentInlineStyle();

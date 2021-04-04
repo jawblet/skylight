@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Menu = ({ items, ...props }) => { 
+
     return ( 
         <menu className='menu'>
-            {items ? 
+                {items ? 
                 props.children
                 : <h4> {props.empty || `Empty menu`} 
                 </h4>
@@ -14,15 +15,5 @@ const Menu = ({ items, ...props }) => {
  
 export default Menu;
 
-/*
 
-         <menu className='menu'>
-                {items ? 
-                props.children
-                : <h4> {props.empty || `Empty menu`} 
-                </h4>
-                }
-            </menu>  
-
-*/
 

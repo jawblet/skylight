@@ -1,0 +1,107 @@
+//popup for posts, tags, and house 
+.popup { 
+    background-color: $sand; 
+    border: 1px solid $sand3;
+    border-radius: $border-small;
+    width: 15rem;
+    min-height: 5rem; 
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $shadow;
+    position: absolute;
+    z-index: 1; // must be on top 
+    &__wrapper {
+        position: relative; 
+        display: flex; 
+        align-items: flex-end; //align bottoms of previews 
+        justify-content: center; //center previews against posts  
+    }
+    &__header {
+        padding-bottom: 1rem;
+    }
+    &__tags {
+        padding-top: 1rem;
+       & > * { padding-bottom: 5px; }
+   }
+   &__item:not(:last-child){
+       padding-bottom: 1rem;
+   }
+}
+
+//container for tag popup 
+.pathLegend {
+    overflow: hidden;
+    max-height: 75vh;
+    position: relative;
+    &__container {
+        //visibility: hidden; // hide
+        position: fixed;
+        right: 0%;
+        top: 15%;
+        width: 25%;
+        height: 1rem;
+        margin-top: 1rem;
+        background-color: inherit;
+    }
+    &__body {
+        overflow: hidden;
+    }
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3px;
+    }
+    &__excerpt:first-child {
+        padding-top: 1.5rem;
+    }
+    &__excerpt {
+        color: $body-light; 
+        font-style: italic;
+        padding-bottom: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__fade {
+       position: absolute;
+       bottom: 1rem;
+       width: 100%;
+       height: 3rem;
+       background:linear-gradient(to bottom, transparent, $sand);
+    }
+}
+
+//tag paths popup
+.tagPathX {
+    opacity: 0.5;
+    display: inline-block;
+    position: absolute;
+    height: 5px; 
+    width: 10rem;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: -1rem;
+}
+
+
+.tagPathY {
+    opacity: 0.5;
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    top: 45%;
+}
+
+
+/*
+    &::after {
+            content: '';
+            display: inline-block;
+            //position: absolute;
+            width: 5px; 
+            height: 3rem;
+            background-color: inherit;
+            right: 0;
+        }
+*/ 

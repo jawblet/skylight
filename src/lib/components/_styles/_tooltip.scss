@@ -1,0 +1,79 @@
+//for btns 
+.tltp {
+    padding: 5px;
+    color: $off-white;
+    background-color: $body-medium;
+    border-radius: $border-smallest;
+    position: absolute;
+    z-index: 3;
+    white-space: nowrap;
+    &--top {
+        left: 50%; // x
+        bottom: 100%; // y
+        transform: translate(-50%, -1.5rem);
+    }
+    &--bottom {
+        left: 50%; // x
+        top: 100%; // y
+        transform: translate(-50%, 1.5rem);
+    }
+    &--right {
+        left: 100%;
+        top: 50%;
+        transform: translate(1rem, -50%);
+    }
+    &--left {
+        right: 100%;
+        top: 50%;
+        transform: translate(-1rem, -50%);
+    }
+    &__text {
+        
+    }
+}
+
+
+//large, generic tooltip
+.tooltip {
+    padding: 1rem;
+    border-radius: $border-small;
+    z-index: 5;
+    width: 15rem;
+    height: auto; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    &--black {
+        color: $off-white;
+        background-color: $body-medium;
+        border: 1px solid $body; 
+    }
+    &--white {
+        background-color: $sand;
+        color: $body-medium;
+        border: 1px solid $sand3;
+    }
+    &--left {
+        top: 50%;
+        transform: translate(-110%, -50%);
+    }
+    &--top {
+        top: 100%;
+        transform: translate(-50%, -110%);
+    }
+}
+
+
+
+/**
+  &::after {
+        content: '';
+        background-color: $body-medium;
+        height: 1rem;
+        width: 3rem;
+        right: 0;
+        transform: translateX(1.5rem);
+        clip-path: polygon(100% 50%, 0 0, 0 100%);
+    }
+**/

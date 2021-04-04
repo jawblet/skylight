@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Prism from 'prismjs';
+import './_styles/assets/prism.css';
 
-const Codeblock = ({ code, lang }) => { 
+const Codeblock = ({ code, lang }) => {  
+
+    useEffect(() => {
+        Prism.highlightAll();
+    }, [code]);
+
     return ( 
         <div className="codeblock">
             <pre className="line-numbers">

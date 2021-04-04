@@ -1,0 +1,75 @@
+%menuHeading { 
+    padding: 0.5rem; 
+    padding-top: 0;
+    font-weight: bold;
+  } 
+  
+  %menuItem {
+    cursor: pointer;
+    background-color: inherit;
+    padding: 0.5rem;
+    color: $body-light;
+    position: relative;
+    border-radius: $border-smallest;
+    transition: all $shortest-fade;
+    &:hover {
+        color: $body; 
+        background-color: $accent;
+    }
+}
+
+//list menu 
+.menu { 
+    padding: 1rem;
+    &__title {
+        @extend %menuHeading;
+    }
+    &__item {
+        @extend %menuItem;
+        &--active {
+            background-color: $accent;
+        }
+        &--dropdown {
+            border-radius: 0;
+        }
+    }
+}
+
+//dropdown select menu w/ active item
+.dropdown { 
+    @extend %card;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    min-width: 10rem;
+    & > li:first-child {
+        border-top-left-radius: $border-small;
+        border-top-right-radius: $border-small;
+    }
+    & > li:last-child {
+        border-bottom-left-radius: $border-small;
+        border-bottom-right-radius: $border-small;
+    }
+    &--shadow {
+        box-shadow: $soft-shadow; 
+    }
+} 
+
+.selectItem {
+    @extend %menuItem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    & > * { 
+        margin-right: 0.5rem;
+    }
+}
+ 
+// can't rolldown anything abs positioned w/o parent AND child having explicit height??? 
+
+.test {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+}

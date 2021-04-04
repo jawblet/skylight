@@ -1,5 +1,4 @@
 import React from 'react';
-import Tree from '../atoms/Tree';
 
 const Button = (props) => {
     return (

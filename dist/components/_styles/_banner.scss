@@ -1,0 +1,20 @@
+.banner {
+    display: block;
+    border-radius: $border-small;
+    padding: 1rem;
+        &--error { 
+            background-color: $error-light; 
+            border: 1px solid $error;
+            color: $off-white;
+        }
+        &--info {
+           background-color: $body-medium;
+           border: 1px solid $body;
+           color: $off-white; 
+        }
+        &--success { 
+            background-color: $accent;
+            color: $body;
+            border: 1px solid $accent2;
+        }
+}

@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const ButtonBar = props => {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "buttonbar ".concat(props.column ? 'buttonbar--column' : 'buttonbar--row'),
+    className: "buttonbar ".concat(props.column ? 'buttonbar--column' : 'buttonbar--row', "\n                "),
     style: props.style
   }, props.children);
 };

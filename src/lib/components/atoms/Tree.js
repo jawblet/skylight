@@ -1,14 +1,7 @@
-import React, { useState, useContext } from 'react'; 
-import { TreeContext } from '../../../hooks/TreeContext';
+import React, { useState } from 'react'; 
 
 const Tree = ({label, tag, ...props}) => { 
-    const { tree } = useContext(TreeContext);
-    
     const [branch, showBranch] = useState(false);
-
-    if(!tree) {
-        return props.children
-    }
     
     return (
             <div className={branch ? 'tree' : ''} 
@@ -27,13 +20,3 @@ const Tree = ({label, tag, ...props}) => {
 }
  
 export default Tree;
-
-/*
-
- <span className={tree ? 'tree' : ''} 
-                                onMouseEnter={() => setTree(true)}
-                                onMouseLeave={() => setTree(false)}>
-                {tree && <code className="tree__name">menu</code> }
-                {props.children}
-            </span> 
-*/

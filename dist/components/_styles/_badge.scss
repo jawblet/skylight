@@ -1,0 +1,14 @@
+.badge {
+    padding: 5px;
+    font-size: 1.1rem;
+    background-color: $accent2;
+    border-radius: 1px;
+    color: $off-white;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    line-height: 100%; // center text 
+    cursor: pointer;
+    &--none {
+      background-color: $body-lightest;
+    } 
+  }

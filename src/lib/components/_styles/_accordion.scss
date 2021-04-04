@@ -1,0 +1,44 @@
+//accordion menu 
+.accordion {
+    overflow: hidden;
+    margin-bottom: 1rem;
+    &__input { display: none; }
+    &__label {
+        @extend %menuHeading;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+        &::after {
+            content: "+";
+            color: $body-light;
+            position: relative;
+            margin-left: 0.5rem;
+            top: 50%;
+            }
+        }
+      &__list {
+          list-style: none;
+          max-height: 0rem;
+          transition: all $short-fade;
+      }
+      &__item {
+          @extend %menuItem;
+          &--indent {
+            padding-left: 1rem;
+          }
+      }
+    }
+    input:checked + .accordion__label::after {
+        content: "-";
+        color: $body-light;
+        position: relative;
+        top: 50%;
+        transform: rotate(-180deg);
+        transition: all $short-fade;
+    }
+    input:checked ~ .accordion__list {
+        max-height: 100vh;
+    }
+    

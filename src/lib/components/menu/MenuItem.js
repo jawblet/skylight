@@ -3,11 +3,11 @@ import { NavLink, Link } from 'react-router-dom';
 
 const Item = ({ item, ...props }) => {
     return (
-            <li className={`menu__item ${props.dropdown ? 'menu__item--dropdown' :''}`} 
-                onClick={props.handleClick} 
-                data-id={item.id}> 
-                    {props.children}
-            </li> 
+        <li className={`menu__item ${props.dropdown ? 'menu__item--dropdown' :''}`} 
+            onClick={props.handleClick} 
+            data-id={item.id}>
+                {props.children}
+        </li> 
     )
 }
 

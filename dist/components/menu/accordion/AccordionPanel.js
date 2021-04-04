@@ -7,8 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Tree = _interopRequireDefault(require("../../atoms/Tree"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -21,9 +19,7 @@ const AccordionPanel = (_ref) => {
   } = _ref,
       props = _objectWithoutProperties(_ref, ["panel"]);
 
-  return /*#__PURE__*/_react.default.createElement(_Tree.default, {
-    label: "AccordionPanel"
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "accordion",
     key: panel.label
   }, /*#__PURE__*/_react.default.createElement("input", {
@@ -36,7 +32,7 @@ const AccordionPanel = (_ref) => {
     htmlFor: "".concat(panel.label)
   }, /*#__PURE__*/_react.default.createElement("h4", null, " ", panel.label, " ")), /*#__PURE__*/_react.default.createElement("menu", {
     className: "accordion__list"
-  }, props.children)));
+  }, props.children));
 };
 
 var _default = AccordionPanel;

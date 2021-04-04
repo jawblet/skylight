@@ -1,0 +1,26 @@
+//modal 
+.modal {
+    width: 40rem;
+    border-radius: $border-large;
+    background-color: $off-white;
+    display: flex;
+    direction: column;
+    justify-content: center;
+    box-shadow: $soft-shadow;
+    padding: 1.5rem; 
+    z-index: 4;
+    &__X {
+        position: relative;
+        right: 0;
+        align-self: flex-end;
+    }
+    &__background { 
+        left: 0;
+        top: 0;
+        position: fixed;  
+        height: 100vh;
+        width: 100vw;
+        background-color: $transparent;
+        z-index: 3;
+    }
+}

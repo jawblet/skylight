@@ -1,13 +1,20 @@
 {
   "name": "skylight-react",
-  "version": "0.1.0",
+  "version": "0.6.4",
   "author": "Julia Bell",
   "description": "React component library",
-  "keywords": ["React", "UI", "components"],
+  "keywords": [
+    "React",
+    "UI",
+    "components"
+  ],
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jawblia/components.git"
@@ -16,12 +23,17 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "autosize": "^4.0.2",
+    "node-sass": "^5.0.0",
+    "react-icons": "^4.2.0",
+    "react-transition-group": "^4.4.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build-examples": "react-scripts build",
     "test": "react-scripts test",
+    "sass": "node-sass src/lib/components/_styles/main.scss src/App.css -w",
     "eject": "react-scripts eject",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },

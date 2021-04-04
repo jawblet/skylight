@@ -1,0 +1,35 @@
+.input { 
+    background-color: $sand;   
+    border: 3px solid $sand; 
+    border-radius: $border-small; 
+    padding: 0.5rem;
+    transition: all $short-fade;
+    &:focus { 
+        border: 3px solid $sand3; 
+    }
+    &--inline {
+        background-color: inherit;
+        border: 3px solid transparent; 
+    }
+    &--fail { 
+        border: 3px solid $error-light;
+        &:focus {
+            border: 3px solid $error; 
+        }
+    }
+    &:disabled {
+            border-color: $body-lightest; 
+            background-color: $shadow;
+            cursor: not-allowed; 
+          }
+    }
+
+ // show password btn   
+.showPass {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%); 
+}
+
+    

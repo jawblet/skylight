@@ -13,9 +13,7 @@ const TableHeader = (_ref) => {
   let {
     headings
   } = _ref;
-  return /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", {
-    className: "table__row"
-  }, headings.map(label => {
+  return /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, headings.map(label => {
     return /*#__PURE__*/_react.default.createElement("th", {
       key: label,
       className: "table__cell heavy"

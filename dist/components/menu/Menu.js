@@ -25,16 +25,4 @@ const Menu = (_ref) => {
 };
 
 var _default = Menu;
-/*
-
-         <menu className='menu'>
-                {items ? 
-                props.children
-                : <h4> {props.empty || `Empty menu`} 
-                </h4>
-                }
-            </menu>  
-
-*/
-
 exports.default = _default;

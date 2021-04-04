@@ -27,6 +27,6 @@ const Tooltip = props => {
   }, text)));
 };
 
-var _default = Tooltip; //tooltip + tag are the same 
+var _default = Tooltip; //tooltip + tag are the same?
 
 exports.default = _default;

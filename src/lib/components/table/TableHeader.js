@@ -3,11 +3,10 @@ import React from 'react';
 const TableHeader = ( { headings }) => {
     return (
         <thead>
-                <tr className="table__row"> 
-                    {headings.map(label => {
-                        return (
-                        <th key={label} 
-                                className="table__cell heavy"> 
+            <tr> 
+                {headings.map(label => {
+                    return (
+                    <th key={label} className="table__cell heavy"> 
                             {label}
                         </th> )
                         } )}

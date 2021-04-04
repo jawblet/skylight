@@ -1,0 +1,35 @@
+.component {
+    background-color: $sand;
+    border-radius: $border-small;
+    padding: 3rem; 
+    &__demo {
+        min-height: 50vh;
+        background-color: $off-white;
+        border-radius: $border-smallest;
+        padding: 3rem;
+    }
+    &__head {
+       // padding-bottom: 1.5rem;
+    }
+}
+
+.props {
+    & > * {
+        margin-bottom: 1.5rem;
+    }
+    &__header {
+        margin-bottom: 0.5rem;
+    }
+}
+
+// optional container inside demo component
+.container {
+    height: 100%;
+    position: relative;
+}
+
+// color
+.color {
+    padding-bottom: 3rem;
+}
+

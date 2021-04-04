@@ -1,0 +1,33 @@
+%card {
+  background-color: $sand;
+  border-radius: $border-small;
+  border: 1px solid $sand4;  
+}
+
+%pin {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: $body-light; 
+  cursor: pointer;
+}
+
+.blur {
+  height: 1rem;
+  width: 1rem;
+  filter: blur(0.25rem);
+  border-radius: 50%;
+}
+
+//cursor
+.pointer {  cursor: pointer; }
+
+//font 
+.light { color: $body-light; }
+
+.lightest { color: $body-lightest; }
+
+.warning { color: $error; }
+
+.bold { font-weight: bold; }
+

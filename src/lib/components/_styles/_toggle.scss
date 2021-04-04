@@ -1,0 +1,34 @@
+%switch {
+    content: '';
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    background-color: $off-white;
+    position: absolute;
+    top: 51%;
+    left: 0;
+}
+
+.toggle {
+    height: 1.5rem;
+    width: 3rem;
+    border: 1px solid $shadow;
+    border-radius: $border-large;
+    background-color: $shadow;
+    cursor: pointer;
+    transition: all $long-fade; // ...  
+    position: relative;
+    &::after {
+        @extend %switch;
+        transform: translate(0, -50%);
+    }
+    &--on {
+        background-color: $accent;
+        border-color: $accent;
+        justify-content: flex-end;
+        &.toggle::after {
+            @extend %switch;
+            transform: translate(115%, -50%);
+        }
+    }
+}
