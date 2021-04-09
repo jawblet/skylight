@@ -23,10 +23,7 @@ const Rolldown = props => {
     nodeRef: nodeRef,
     classNames: "grow",
     unmountOnExit: true,
-    node: nodeRef,
-    style: {
-      position: 'relative'
-    }
+    node: nodeRef
   }, /*#__PURE__*/_react.default.createElement("div", {
     ref: nodeRef
   }, props.children));

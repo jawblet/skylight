@@ -1,18 +1,18 @@
-import React, { useRef } from 'react';
-import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import React, { useRef } from 'react'; 
+import { CSSTransition } from 'react-transition-group';
 
 
 const Blur = (props) => {
     const nodeRef = useRef(null);
     return (
             <CSSTransition in={props.in} 
-                timeout={350} 
+                timeout={150} 
                 classNames="zoom" 
                 nodeRef={nodeRef}
                 unmountOnExit> 
-                    <span ref={nodeRef}>
-                        {props.children}
-                    </span>
+                <div ref={nodeRef}>
+                    {props.children}
+                </div>
             </CSSTransition>
 
 

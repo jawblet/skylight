@@ -19,15 +19,89 @@
   border-radius: 50%;
 }
 
-//cursor
-.pointer {  cursor: pointer; }
+.fade {
+   //border: 1px solid red;
+    width: 100%;
+    height: 3rem;
+    background-image:linear-gradient(transparent 0%, $body 80%, $body 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.dark--highlight {
+  padding: 0 5px;
+  background-color: $body-light;
+  color: $off-white;
+}
 
 //font 
 .light { color: $body-light; }
-
 .lightest { color: $body-lightest; }
-
 .warning { color: $error; }
-
 .bold { font-weight: bold; }
+.transparent-half { opacity: 50%; }
+.transparent-most { opacity: 75%; }
 
+//borders
+.border-lightest { border: 1px solid $body-lightest; }
+
+
+//text
+//cursor
+.pointer {  cursor: pointer; }
+
+.inlineTag {
+  border-radius: 3px;
+  padding: 1px 3px; 
+}
+
+.highlight {  background-color: $accent; }
+
+.inlineLink {
+  color: $accent3;
+  cursor: pointer;
+}
+
+.darkHighlight {
+  background-color: $body-medium;
+  color: $off-white;
+}
+
+.unstyledList {
+  list-style: none;
+}
+
+
+//tree list 
+ul.treeList, ul.treeList ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ } 
+ ul.treeList ul {
+   margin-left: 1.5rem;
+ }
+
+ ul.treeList li {
+   margin: 0;
+   padding: 0 7px;
+   border-left: 1px solid $body-lightest;
+ }
+ ul.treeList li:last-child {
+     border-left: none;
+ }
+ ul.treeList li:before {
+    content:"";
+    position:relative;
+    top:-0.3em;
+    height:1em;
+    width:12px;
+    border-bottom: 1px solid $body-lightest;
+    display:inline-block;
+    left: -7px;
+ }
+ ul.treeList li:last-child:before {
+    border-left: 1px solid $body-lightest; 
+ }

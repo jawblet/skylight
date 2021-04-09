@@ -4,7 +4,7 @@ import PageTitle from '../../../atoms/PageTitle';
 const TitledPage = (props) => {
     return (
         <div>
-              <PageTitle title={props.title} style={{paddingBottom:'3rem'}}/> 
+              <PageTitle title={props.title} style={{marginBottom:'1.5rem'}}/> 
               {props.children}
         </div>
     );

@@ -93,6 +93,7 @@ const Flex = props => {
     return {
       display: inline ? "inline-flex" : "flex",
       flexDirection: props.column ? "column" : "row",
+      flexWrap: props.wrap ? "wrap" : "nowrap",
       justifyContent: mainAxis,
       alignItems: crossAxis,
       width: props.width,

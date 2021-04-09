@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { CSSTransition } from 'react-transition-group'; 
 
-
 const Slide = (props) => {
     const nodeRef = useRef(null);
 
@@ -15,7 +14,7 @@ const Slide = (props) => {
             <div ref={nodeRef}>
                 {props.children}
             </div>
-    </CSSTransition>
+        </CSSTransition>
     );
 }
  

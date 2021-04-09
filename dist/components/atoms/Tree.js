@@ -17,6 +17,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+//import { TreeContext } from '../../../hooks/TreeContext';
 const Tree = (_ref) => {
   let {
     label,
@@ -24,11 +25,20 @@ const Tree = (_ref) => {
   } = _ref,
       props = _objectWithoutProperties(_ref, ["label", "tag"]);
 
-  const [branch, showBranch] = (0, _react.useState)(false);
+  const {
+    tree
+  } = (0, _react.useContext)(TreeContext);
+  const [branch, showBranch] = (0, _react.useState)(true); // if(!tree) {
+  //     return props.children
+  // }
+
   return /*#__PURE__*/_react.default.createElement("div", {
     className: branch ? 'tree' : '',
-    onMouseEnter: () => showBranch(true),
-    onMouseLeave: () => showBranch(false)
+    style: {
+      width: props.width
+    } // onMouseEnter={() => showBranch(true)}
+    // onMouseLeave={() => showBranch(false)}
+
   }, branch && /*#__PURE__*/_react.default.createElement("code", {
     className: "tree__name"
   }, /*#__PURE__*/_react.default.createElement("span", {

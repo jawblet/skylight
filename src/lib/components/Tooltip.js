@@ -1,5 +1,4 @@
 import React from 'react'; 
-import Fade from './animate/Fade';
 
 const Tooltip = (props) => {
     const { text, 
@@ -7,17 +6,17 @@ const Tooltip = (props) => {
             show } = props; 
             
     return (
-        <Fade in={show}>
-            <div className={`tltp tltp--${direction}`}
+       <>
+          {show && 
+          <div className={`tltp tltp--${direction || 'top'}`}
                 style={props.style}>
                 <h4 className="tltp__text">{text}</h4>
-            </div>
-        </Fade>
+            </div>}
+        </>
    
     );
 }
  
 export default Tooltip;
-
 
 //tooltip + tag are the same?

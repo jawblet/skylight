@@ -33,10 +33,10 @@ Object.defineProperty(exports, "Toggle", {
     return _Toggle.default;
   }
 });
-Object.defineProperty(exports, "BreadCrumbs", {
+Object.defineProperty(exports, "Breadcrumbs", {
   enumerable: true,
   get: function get() {
-    return _BreadCrumbs.default;
+    return _Breadcrumbs.default;
   }
 });
 Object.defineProperty(exports, "ButtonBar", {
@@ -120,7 +120,13 @@ Object.defineProperty(exports, "AccordionMenu", {
 Object.defineProperty(exports, "Modal", {
   enumerable: true,
   get: function get() {
-    return _Modal.default;
+    return _Modal.Modal;
+  }
+});
+Object.defineProperty(exports, "ModalComponent", {
+  enumerable: true,
+  get: function get() {
+    return _Modal.ModalComponent;
   }
 });
 Object.defineProperty(exports, "Notification", {
@@ -138,7 +144,7 @@ Object.defineProperty(exports, "Paginate", {
 Object.defineProperty(exports, "Tag", {
   enumerable: true,
   get: function get() {
-    return _Tag.default;
+    return _Tag.Tag;
   }
 });
 Object.defineProperty(exports, "TagPreview", {
@@ -153,6 +159,18 @@ Object.defineProperty(exports, "Tooltip", {
     return _Tooltip.default;
   }
 });
+Object.defineProperty(exports, "Flex", {
+  enumerable: true,
+  get: function get() {
+    return _Flex.default;
+  }
+});
+Object.defineProperty(exports, "Grid", {
+  enumerable: true,
+  get: function get() {
+    return _Grid.default;
+  }
+});
 
 var _Badge = _interopRequireDefault(require("./components/Badge"));
 
@@ -164,7 +182,7 @@ var _IconButton = _interopRequireDefault(require("./components/btn/IconButton"))
 
 var _Toggle = _interopRequireDefault(require("./components/btn/Toggle"));
 
-var _BreadCrumbs = _interopRequireDefault(require("./components/BreadCrumbs"));
+var _Breadcrumbs = _interopRequireDefault(require("./components/Breadcrumbs"));
 
 var _ButtonBar = _interopRequireDefault(require("./components/ButtonBar"));
 
@@ -190,16 +208,20 @@ var _MenuItem = _interopRequireDefault(require("./components/menu/MenuItem"));
 
 var _AccordionMenu = _interopRequireDefault(require("./components/menu/accordion/AccordionMenu"));
 
-var _Modal = _interopRequireDefault(require("./components/Modal"));
+var _Modal = require("./components/Modal");
 
 var _Notification = _interopRequireDefault(require("./components/Notification"));
 
 var _Paginate = _interopRequireDefault(require("./components/Paginate"));
 
-var _Tag = _interopRequireDefault(require("./components/tag/Tag"));
+var _Tag = require("./components/tag/Tag");
 
 var _TagPreview = _interopRequireDefault(require("./components/tag/TagPreview"));
 
 var _Tooltip = _interopRequireDefault(require("./components/Tooltip"));
+
+var _Flex = _interopRequireDefault(require("./components/layout/Flex"));
+
+var _Grid = _interopRequireDefault(require("./components/layout/Grid"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

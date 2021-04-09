@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import { CSSTransition } from 'react-transition-group'; 
 
-const Rolldown = (props) => {
+const DropdownY = (props) => {
     const nodeRef = useRef(null);
-    return (
+    return ( 
         <CSSTransition in={props.in} 
-                timeout={350} 
+                timeout={150} 
                 nodeRef={nodeRef} 
-                classNames="grow" 
+                classNames="dropdownY" 
                 unmountOnExit
                 node={nodeRef}
                 > 
@@ -20,6 +20,5 @@ const Rolldown = (props) => {
     );
 }
  
-export default Rolldown;
+export default DropdownY;
 
-//

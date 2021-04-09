@@ -7,11 +7,12 @@ const IconButton = (props) => {
                                 ${props.active ? 'btn--active' : ''}
                                 ${props.warning ? 'btn--warning' : ''}
                                 ${props.className}`} 
-                onClick={props.handleClick}
+                onClick={props.handleClick} 
                 data-id={props.dataId} 
                 style={props.style}
                 >
             {props.icon} 
+            {props.children}
         </button>
     )
 }

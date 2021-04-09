@@ -14,7 +14,7 @@
     transition: all $shortest-fade;
     &:hover {
         color: $body; 
-        background-color: $accent;
+        background-color: $accent; 
     }
 }
 
@@ -35,7 +35,6 @@
     }
 }
 
-//dropdown select menu w/ active item
 .dropdown { 
     @extend %card;
     display: flex;
@@ -66,10 +65,4 @@
     }
 }
  
-// can't rolldown anything abs positioned w/o parent AND child having explicit height??? 
 
-.test {
-    width: 5rem;
-    height: 5rem;
-    background-color: red;
-}

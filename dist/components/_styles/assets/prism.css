@@ -2,7 +2,7 @@
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+scss */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
+ * Based on https://github.com/chriskempson/tomorrow-theme  
  * @author Rose Pritchard
  */
 
@@ -77,14 +77,14 @@ pre[class*="language-"] {
 .token.boolean,
 .token.number,
 .token.function {
-	color: #f08d49;
+	color: #EEAC6E;
 }
 
 .token.property,
 .token.class-name,
 .token.constant,
 .token.symbol {
-	color: #f8c555;
+	color: #EEAC6E;
 }
 
 .token.selector,
@@ -92,7 +92,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-	color: #cc99cd;
+	color: #f7c06ebf;
 }
 
 .token.string,
@@ -100,13 +100,13 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.regex,
 .token.variable {
-	color: #7ec699;
+	color: #78AEED;	
 }
 
 .token.operator,
 .token.entity,
 .token.url {
-	color: #67cdcc;
+	color: #BEF1B2;
 }
 
 .token.important,

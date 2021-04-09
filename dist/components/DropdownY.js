@@ -15,18 +15,19 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-const Blur = props => {
+const DropdownY = props => {
   const nodeRef = (0, _react.useRef)(null);
   return /*#__PURE__*/_react.default.createElement(_reactTransitionGroup.CSSTransition, {
     in: props.in,
     timeout: 150,
-    classNames: "zoom",
     nodeRef: nodeRef,
-    unmountOnExit: true
+    classNames: "dropdownY",
+    unmountOnExit: true,
+    node: nodeRef
   }, /*#__PURE__*/_react.default.createElement("div", {
     ref: nodeRef
   }, props.children));
 };
 
-var _default = Blur;
+var _default = DropdownY;
 exports.default = _default;

@@ -7,8 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Rolldown = _interopRequireDefault(require("../animate/Rolldown"));
-
 var _Drawer = _interopRequireDefault(require("../Drawer"));
 
 var _MenuItem = _interopRequireDefault(require("./MenuItem"));
@@ -16,6 +14,8 @@ var _MenuItem = _interopRequireDefault(require("./MenuItem"));
 var _useDetectClickOut = _interopRequireDefault(require("../_hooks/useDetectClickOut"));
 
 var _useSelectOne = _interopRequireDefault(require("../_hooks/useSelectOne"));
+
+var _DropdownY = _interopRequireDefault(require("../animate/DropdownY"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49,7 +49,7 @@ const SelectMenu = (_ref) => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "selectItem",
     ref: triggerRef
-  }, /*#__PURE__*/_react.default.createElement("h4", null, selectItem), /*#__PURE__*/_react.default.createElement("h4", null, "+")), /*#__PURE__*/_react.default.createElement(_Rolldown.default, {
+  }, /*#__PURE__*/_react.default.createElement("h4", null, selectItem), /*#__PURE__*/_react.default.createElement("h4", null, "+")), /*#__PURE__*/_react.default.createElement(_DropdownY.default, {
     in: show
   }, /*#__PURE__*/_react.default.createElement(_Drawer.default, {
     ref: nodeRef

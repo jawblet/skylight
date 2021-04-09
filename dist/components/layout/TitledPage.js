@@ -15,7 +15,7 @@ const TitledPage = props => {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_PageTitle.default, {
     title: props.title,
     style: {
-      paddingBottom: '3rem'
+      marginBottom: '1.5rem'
     }
   }), props.children);
 };

@@ -16,7 +16,7 @@ const IconButton = props => {
     onClick: props.handleClick,
     "data-id": props.dataId,
     style: props.style
-  }, props.icon);
+  }, props.icon, props.children);
 };
 
 var _default = IconButton;

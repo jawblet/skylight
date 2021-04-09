@@ -13,13 +13,16 @@ $sand2: #F2EADF; //depth + contrast
 $sand3: #EFDDC8; //pop styles + highlights 
 $sand4: #E1C7A9;// borders + details
 
-//$accent: rgba(247, 192, 110, 0.75);
-//$accent2: #EA9144;
-//$accent3: rgb(219, 107, 38);
+$accent: #f7c06ebf; // hover 
+$accent2: #EEAC6E; // active 
+$accent3: #db6b26; // highlight 
 
-$accent: #68FFC9;
-$accent2: #37E4A6;
-$accent3: #0F734F;
+$blue: #3187EC;
+$light-blue: #78AEED;
+$green: #8FEE77;
+$light-green: #BEF1B2;
+$yellow: #F3DE6B;
+$light-yellow: #F6E89A;
 
 //other 
 $error: #973618;
@@ -52,7 +55,7 @@ $long-fade: .7s;
     --sand2: #{$sand2};
     --sand3: #{$sand3};
     --sand4: #{$sand4};
-    --offwhite: #{$off-white};
+    --off-white: #{$off-white};
     --body: #{$body};
     --body-medium: #{$body-medium};
     --body-light: #{$body-light};
@@ -62,5 +65,11 @@ $long-fade: .7s;
     --accent: #{$accent};
     --accent2: #{$accent2};
     --accent3: #{$accent3};
+    --blue: #{$blue};
+    --light-blue: #{$light-blue};
+    --yellow: #{$yellow};
+    --light-yellow: #{$light-yellow};
+    --green: #{$green};
+    --light-green: #{$light-green};
     --shadow: #{$shadow};
 }

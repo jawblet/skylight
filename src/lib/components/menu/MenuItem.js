@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-const Item = ({ item, ...props }) => {
+const Item = (props) => { 
     return (
         <li className={`menu__item ${props.dropdown ? 'menu__item--dropdown' :''}`} 
             onClick={props.handleClick} 
-            data-id={item.id}>
+            data-id={props.item.id || props.id}
+            >
                 {props.children}
         </li> 
     )

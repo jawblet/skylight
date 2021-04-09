@@ -3,7 +3,7 @@ import React from 'react';
 const Flex = (props) => {
     //initialize axis
     let mainAxis = "flex-start";
-    let crossAxis = "stretch"; 
+    let crossAxis = "stretch";
 
     const getFlex = (props) => {
         const {
@@ -64,7 +64,7 @@ const Flex = (props) => {
                 mainAxis = "flex-start";
             } else if (middle) {
                 mainAxis = "center";
-            } else if (bottom) {
+            } else if (bottom) { 
                 mainAxis = "flex-end";
             } else if (between) {
                 mainAxis = "space-between";
@@ -77,6 +77,7 @@ const Flex = (props) => {
       return {
           display: inline ? "inline-flex" : "flex",
           flexDirection: props.column ? "column" : "row",
+          flexWrap: props.wrap ? "wrap" : "nowrap",
           justifyContent: mainAxis,
           alignItems: crossAxis,
           width: props.width,

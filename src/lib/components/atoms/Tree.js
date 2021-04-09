@@ -1,12 +1,20 @@
-import React, { useState } from 'react'; 
+import React, { useState, useContext } from 'react'; 
+//import { TreeContext } from '../../../hooks/TreeContext';
 
 const Tree = ({label, tag, ...props}) => { 
-    const [branch, showBranch] = useState(false);
+    const { tree } = useContext(TreeContext);
+    
+    const [branch, showBranch] = useState(true);
+
+   // if(!tree) {
+   //     return props.children
+   // }
     
     return (
             <div className={branch ? 'tree' : ''} 
-                onMouseEnter={() => showBranch(true)}
-                onMouseLeave={() => showBranch(false)}
+                style={{width:props.width}}
+               // onMouseEnter={() => showBranch(true)}
+               // onMouseLeave={() => showBranch(false)}
                 >
                 {branch && 
                     <code className="tree__name">

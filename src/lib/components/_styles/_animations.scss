@@ -26,8 +26,30 @@
     }
 }
 
+.dropdownY {
+    &-enter {  
+        transform: rotateX(-90deg);
+    }
+    &-enter-active {  
+        transform: rotateX(0deg); 
+        transition: transform $short-fade ease-in-out;
+    }
+    &-enter-done { 
+        transform: rotateX(0deg) 
+    }
+    &-exit { 
+        transform: rotateX(0deg) 
+    }
+    &-exit-active {
+        transform: rotateX(-90deg); 
+        transition: transform $short-fade ease-in-out;
+    }
+    &-exit-done { 
+        transform: rotateX(-90deg);
+    }
+}
 
-//flies off screen
+//flies off screen // yes 
 .rollOutX {
     &-enter { 
         transform: translateX(100%);
@@ -66,7 +88,7 @@
     &-exit { 
         transform: translateX(0);
     }
-    &-exit-active{
+    &-exit-active{ 
         transform: translateX(100%);
         transition: transform 0.35s cubic-bezier(0.12, 0, 0.39, 0);  
     }
@@ -97,7 +119,6 @@
         opacity: 0;
     }
 }
-
 
 .zoom {
     &-enter { 

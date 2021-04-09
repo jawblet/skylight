@@ -11,20 +11,11 @@ var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-const Item = (_ref) => {
-  let {
-    item
-  } = _ref,
-      props = _objectWithoutProperties(_ref, ["item"]);
-
+const Item = props => {
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "menu__item ".concat(props.dropdown ? 'menu__item--dropdown' : ''),
     onClick: props.handleClick,
-    "data-id": item.id
+    "data-id": props.item.id || props.id
   }, props.children);
 };
 

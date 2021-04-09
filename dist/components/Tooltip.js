@@ -7,8 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Fade = _interopRequireDefault(require("./animate/Fade"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Tooltip = props => {
@@ -17,10 +15,8 @@ const Tooltip = props => {
     direction,
     show
   } = props;
-  return /*#__PURE__*/_react.default.createElement(_Fade.default, {
-    in: show
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "tltp tltp--".concat(direction),
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, show && /*#__PURE__*/_react.default.createElement("div", {
+    className: "tltp tltp--".concat(direction || 'top'),
     style: props.style
   }, /*#__PURE__*/_react.default.createElement("h4", {
     className: "tltp__text"
