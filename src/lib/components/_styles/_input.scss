@@ -1,4 +1,5 @@
 .input { 
+    width: 100%;
     background-color: $sand;   
     border: 3px solid $sand; 
     border-radius: $border-small; 
@@ -10,6 +11,7 @@
     &--inline {
         background-color: inherit;
         border: 3px solid transparent; 
+        padding-left: 0;
     }
     &--fail { 
         border: 3px solid $error-light;
@@ -17,6 +19,9 @@
             border: 3px solid $error; 
         }
     }
+    &::placeholder{
+        color: $body-lightest;
+    } 
     &:disabled {
             border-color: $body-lightest; 
             background-color: $shadow;

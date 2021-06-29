@@ -1,0 +1,53 @@
+:root {
+    --sand: #FAF3ED;
+    --sand2: #F2EADF;
+    --sand3: #EFDDC8;
+    --off-white: #FFFCF8;
+    --body: #312F2C;
+    --body-medium: #433D37;
+    --body-light: #776B5E;
+    --body-lightest: #C7BEB6;
+    --error: #973618;
+    --errorlight: #eb8c6f;
+    --orange: #f7c06e;
+    --orange2: #bd6819;
+    --blue: #3187EC;
+    --blue2: #78AEED;
+    --yellow: #F3DE6B;
+    --light-yellow: #F6E89A;
+    --green: #8FEE77;
+    --light-green: #BEF1B2;
+    --shadow: #ebe9e5; 
+    --soft-shadow: 4px 4px 16px #ebe9e5, -4px -4px 16px #fff; 
+  }
+
+menu {
+    list-style: none; 
+  }
+
+a {
+    text-decoration: none;
+    color: #776B5E;
+    cursor: pointer;
+    margin: 0 !important; }
+  
+  input, textarea {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #312F2C; }
+    input:focus, textarea:focus {
+      outline: none;
+      border: none; }
+  
+  button {
+    background: none;
+    border: none;
+    padding: none;
+    cursor: pointer; }
+    button:focus {
+      outline: none; }
+  
+  textarea {
+    resize: none; 
+  }

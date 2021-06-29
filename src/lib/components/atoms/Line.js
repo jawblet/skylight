@@ -11,7 +11,9 @@ const Line = (props) => {
     } 
 
     return (
-            <hr style={{background: getLine(props.col), width:props.width }}>
+            <hr style={{background: getLine(props.col), width:props.width}} 
+                className={props.className}
+                data-id={props.id}>
             </hr>         
     );
 }

@@ -7,6 +7,12 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+require("./Menu.css");
+
+require("../_global.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -19,9 +25,20 @@ const Menu = (_ref) => {
   } = _ref,
       props = _objectWithoutProperties(_ref, ["items"]);
 
+  Menu.propTypes = {
+    /** Custom classname */
+    className: _propTypes.default.string,
+
+    /** Custom styles */
+    style: _propTypes.default.object,
+
+    /** Component's children */
+    children: _propTypes.default.node
+  };
   return /*#__PURE__*/_react.default.createElement("menu", {
-    className: "menu"
-  }, items ? props.children : /*#__PURE__*/_react.default.createElement("h4", null, " ", props.empty || "Empty menu"));
+    className: "menu ".concat(props.className),
+    style: props.style
+  }, props.children);
 };
 
 var _default = Menu;

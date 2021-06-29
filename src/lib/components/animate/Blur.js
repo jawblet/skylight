@@ -7,7 +7,7 @@ const Blur = (props) => {
     return (
             <CSSTransition in={props.in} 
                 timeout={150} 
-                classNames="zoom" 
+                classNames="blur" 
                 nodeRef={nodeRef}
                 unmountOnExit> 
                 <div ref={nodeRef}>

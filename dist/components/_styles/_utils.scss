@@ -1,11 +1,44 @@
+//font 
+.center { text-align: center; }
+.left { text-align: left; }
+.light { color: $body-light; }
+.lightest { color: $body-lightest; }
+.warning { color: $error; }
+.bold { font-weight: bold; }
+.transparent-half { opacity: 50%; }
+.transparent-most { opacity: 75%; }
+.pointer {  cursor: pointer; }
+.border-lightest { border: 1px solid $body-lightest; }
+.noborder { border: none; }
+ 
+//spacing
+ .padS { padding: 1rem; }
+ .padM { padding: 1.5rem; }
+ .padL { padding: 3rem; }
+ .padBottomS { padding-bottom: 1rem; }
+ .padBottomM { padding-bottom: 1.5rem; }
+ .padBottomL { padding-bottom: 3rem; }
+ .marBottomS { margin-bottom: 1rem; }
+ .marBottomM { margin-bottom: 1.5rem; }
+ .marBottomL { margin-bottom: 3rem; }
+
+ //highlights
+.highlight {  
+  background-color: $orange; 
+}
+.darkHighlight { 
+  background-color: $body-medium; color: 
+  $off-white;
+}
+
 %card {
   background-color: $sand;
   border-radius: $border-small;
-  border: 1px solid $sand4;  
+  border: 1px solid $sand3;  
 }
 
 %pin {
-  height: 6px;
+  height: 6px; 
   width: 6px;
   border-radius: 50%;
   background-color: $body-light; 
@@ -20,7 +53,6 @@
 }
 
 .fade {
-   //border: 1px solid red;
     width: 100%;
     height: 3rem;
     background-image:linear-gradient(transparent 0%, $body 80%, $body 100%);
@@ -36,49 +68,31 @@
   color: $off-white;
 }
 
-//font 
-.light { color: $body-light; }
-.lightest { color: $body-lightest; }
-.warning { color: $error; }
-.bold { font-weight: bold; }
-.transparent-half { opacity: 50%; }
-.transparent-most { opacity: 75%; }
+form > * {
+  padding-bottom: 1.5rem;
+}
 
-//borders
-.border-lightest { border: 1px solid $body-lightest; }
-
-
-//text
-//cursor
-.pointer {  cursor: pointer; }
 
 .inlineTag {
   border-radius: 3px;
   padding: 1px 3px; 
 }
 
-.highlight {  background-color: $accent; }
-
 .inlineLink {
-  color: $accent3;
+  color: $orange2;
   cursor: pointer;
 }
 
-.darkHighlight {
-  background-color: $body-medium;
-  color: $off-white;
-}
-
+//list 
 .unstyledList {
   list-style: none;
 }
 
-
-//tree list 
 ul.treeList, ul.treeList ul {
    list-style: none;
    margin: 0;
    padding: 0;
+   line-height: 200%;
  } 
  ul.treeList ul {
    margin-left: 1.5rem;
@@ -105,3 +119,6 @@ ul.treeList, ul.treeList ul {
  ul.treeList li:last-child:before {
     border-left: 1px solid $body-lightest; 
  }
+
+
+

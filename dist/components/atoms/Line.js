@@ -27,7 +27,9 @@ const Line = props => {
     style: {
       background: getLine(props.col),
       width: props.width
-    }
+    },
+    className: props.className,
+    "data-id": props.id
   });
 };
 

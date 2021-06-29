@@ -5,13 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-require("core-js/modules/es.symbol.description.js");
-
 var _react = _interopRequireDefault(require("react"));
 
 var _TableHeader = _interopRequireDefault(require("./TableHeader"));
-
-var _Cell = _interopRequireDefault(require("./Cell"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33,11 +29,7 @@ const Table = (_ref) => {
     }
   }, /*#__PURE__*/_react.default.createElement(_TableHeader.default, {
     headings: headings
-  }), /*#__PURE__*/_react.default.createElement("tbody", null, rows.map((el, i) => {
-    return /*#__PURE__*/_react.default.createElement("tr", {
-      key: i
-    }, /*#__PURE__*/_react.default.createElement(_Cell.default, null, el.name), /*#__PURE__*/_react.default.createElement(_Cell.default, null, el.id), /*#__PURE__*/_react.default.createElement(_Cell.default, null, el.description), /*#__PURE__*/_react.default.createElement(_Cell.default, null, el.date));
-  })));
+  }), /*#__PURE__*/_react.default.createElement("tbody", null, props.children));
 };
 
 var _default = Table;

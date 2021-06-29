@@ -11,7 +11,7 @@ const Flex = (props) => {
             column, // row or column 
 
             left, // justify-content: start 
-            center, // justify-content: middle
+            center, // justify-content: center
             right, // justify-content: right
             between, // justify-content: space-between
             around, // justify-content: space-around
@@ -89,7 +89,9 @@ const Flex = (props) => {
 
     return (
         <div style={getFlex(props)}
-            className={props.className}>
+            className={props.className}
+            data-id={props.id}
+            onClick={props.handleClick}>
             {props.children}
         </div>
     );

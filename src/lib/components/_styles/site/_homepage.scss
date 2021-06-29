@@ -8,26 +8,6 @@
     }
 }
 
-.panel {
-    flex: 1;
-    &__title {
-        cursor: pointer;
-        padding: 1rem;
-        position: relative;
-        display: flex;
-        border: 1px solid $body;
-        background-color: inherit;
-        transition: all $short-fade;
-        &:hover {
-            background-color: $accent;
-        }
-        & > * {
-            padding-right: 1rem;
-        }
-    }
-    &__dropdown {
-        width: 100%;
-        padding: 1rem;
-        padding-left: 3rem;
-    }
+.atom {
+    
 }

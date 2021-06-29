@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Prism from 'prismjs';
-//import '../../../node_modules/prismjs/components/prism-scss'; 
-//import '../../../node_modules/prismjs/components/prism-jsx'; 
 import './_styles/assets/prism.css';
 
 const Codeblock = ({ code, lang, ...props }) => {  

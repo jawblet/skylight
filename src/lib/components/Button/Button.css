@@ -1,0 +1,57 @@
+.btn, .iconbutton, .inlinebutton {
+    min-width: 3rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.35s;
+    position: relative;
+    height: 3rem; }
+    .btn:disabled, .iconbutton:disabled, .inlinebutton:disabled {
+      cursor: not-allowed; }
+      .btn:disabled:hover, .iconbutton:disabled:hover, .inlinebutton:disabled:hover {
+        background-color: inherit; }
+  
+  .btn {
+    height: 2.3rem; }
+    .btn:hover {
+      background-color: #EFDDC8; }
+    .btn:active {
+      background-color: #af5807; }
+    .btn--fill {
+      background-color: #F2EADF; }
+    .btn--empty {
+      border: 1px solid #776B5E;
+      color: #776B5E; }
+    .btn--warning {
+      color: #973618;
+      border: 1px solid #973618; }
+      .btn--warning:hover {
+        background-color: #eb8c6f;
+        color: #FFFCF8; }
+  
+  .CTA {
+    height: 3rem;
+    min-width: 6rem;
+    border-radius: 50%;
+    font-weight: bold; }
+    .CTA--fill {
+      border: 1px solid #433D37; }
+    .CTA--active {
+      border: 1px solid #af5807; }
+  
+  .iconbutton {
+    height: 3rem; }
+  
+  .inlinebutton {
+    height: 2.3rem; }
+
+    .icon {
+      font-size: 1.1rem;
+      color: #776B5E;
+      cursor: pointer;
+      transition: all 0.35s; }
+      .icon:hover {
+        color: #312F2C; }

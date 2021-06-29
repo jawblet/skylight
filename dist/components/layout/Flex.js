@@ -23,7 +23,7 @@ const Flex = props => {
       left,
       // justify-content: start 
       center,
-      // justify-content: middle
+      // justify-content: center
       right,
       // justify-content: right
       between,
@@ -105,7 +105,9 @@ const Flex = props => {
 
   return /*#__PURE__*/_react.default.createElement("div", {
     style: getFlex(props),
-    className: props.className
+    className: props.className,
+    "data-id": props.id,
+    onClick: props.handleClick
   }, props.children);
 };
 

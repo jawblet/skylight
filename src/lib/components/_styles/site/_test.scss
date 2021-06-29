@@ -2,33 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5rem;
-    width: 5rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: $border-small;
-    background-color: $accent;
-    border: 1px solid $accent3;
-    color: $accent3;
-    transform: rotate(90deg);
-    &--abs {
-        position: absolute;
-        // left: 50%;
-        // transform: translateX(-50%);
-    }
+    background-color: $orange;
+    border: 1px solid $orange2; 
+    color: $orange2;
     &__container {
-        margin-bottom: 3rem; 
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+       & > * {
+           margin-bottom: 1rem;
+       }
     }
 }
 
-.trigger {
-    position: absolute;
-    top: 0;
-    //left: 50%;
-    //transform: translateX(-50%);
-    cursor: pointer;
+.sample {
+    padding: 3rem;
+    border: 1px dashed $body-light;
 }
-
-//rolldown transition doesn't work when drawer is abs positioned 
-.rolldown__wrapper {
-    position: relative;
-}
-

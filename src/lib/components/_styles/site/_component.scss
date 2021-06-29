@@ -2,14 +2,18 @@
     background-color: $sand;
     border-radius: $border-small;
     padding: 3rem; 
+    position: relative;
     &__demo {
         min-height: 50vh;
         background-color: $off-white;
         border-radius: $border-smallest;
         padding: 3rem;
+        position: relative;
     }
-    &__head {
-       // padding-bottom: 1.5rem;
+    &__tree {
+        position: absolute; 
+        right: 3rem;
+        top: 3rem;
     }
 }
 

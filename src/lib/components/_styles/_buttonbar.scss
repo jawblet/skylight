@@ -1,17 +1,18 @@
 .buttonbar {
   display: inline-flex;
-  position: relative;
+  position: relative; 
+  background-color: $sand;
   border-radius: $border-small;
-  & > * {
+  & button {
     border-radius: 0;
   }
   &--column { 
     flex-direction: column;
-    & > :first-child {
+    & > button:first-of-type {
       border-top-right-radius: $border-small;
       border-top-left-radius: $border-small;
       } 
-    & > :last-child {
+    & > button:last-child {
         border-bottom-right-radius: $border-small;
         border-bottom-left-radius: $border-small;
       } 
@@ -20,11 +21,11 @@
     }
   } 
   &--row {
-    & > :first-child {
+    & button:first-of-type {
       border-top-left-radius: $border-small;
       border-bottom-left-radius: $border-small;
   }
-    & > :last-child {
+    & button:last-of-type  {
       border-top-right-radius: $border-small;
       border-bottom-right-radius: $border-small;
     }  
@@ -33,10 +34,3 @@
     }
   }
 }
-
-/*
- & > *:not(:last-child) {
-    //border-right: 1px solid $body-lightest;
-    border-bottom: 1px solid $body-lightest;
-  }
-*/

@@ -13,8 +13,12 @@
            color: $off-white; 
         }
         &--success { 
-            background-color: $accent;
+            background-color: $orange;
             color: $body;
-            border: 1px solid $accent2;
+            border: 1px solid $orange2;
+        }
+        &--subtle {
+            background-color: $sand;
+            color: $sand3;
         }
 }

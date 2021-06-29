@@ -3,16 +3,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Badge", {
+Object.defineProperty(exports, "AccordionDropdown", {
   enumerable: true,
   get: function get() {
-    return _Badge.default;
+    return _AccordionDropdown.default;
   }
 });
-Object.defineProperty(exports, "Banner", {
+Object.defineProperty(exports, "AccordionTitle", {
   enumerable: true,
   get: function get() {
-    return _Banner.default;
+    return _AccordionTitle.default;
+  }
+});
+Object.defineProperty(exports, "Accordion", {
+  enumerable: true,
+  get: function get() {
+    return _Accordion.default;
   }
 });
 Object.defineProperty(exports, "Button", {
@@ -21,40 +27,10 @@ Object.defineProperty(exports, "Button", {
     return _Button.default;
   }
 });
-Object.defineProperty(exports, "IconButton", {
+Object.defineProperty(exports, "Card", {
   enumerable: true,
   get: function get() {
-    return _IconButton.default;
-  }
-});
-Object.defineProperty(exports, "Toggle", {
-  enumerable: true,
-  get: function get() {
-    return _Toggle.default;
-  }
-});
-Object.defineProperty(exports, "Breadcrumbs", {
-  enumerable: true,
-  get: function get() {
-    return _Breadcrumbs.default;
-  }
-});
-Object.defineProperty(exports, "ButtonBar", {
-  enumerable: true,
-  get: function get() {
-    return _ButtonBar.default;
-  }
-});
-Object.defineProperty(exports, "Checkbox", {
-  enumerable: true,
-  get: function get() {
-    return _Checkbox.default;
-  }
-});
-Object.defineProperty(exports, "Codeblock", {
-  enumerable: true,
-  get: function get() {
-    return _Codeblock.default;
+    return _Card.default;
   }
 });
 Object.defineProperty(exports, "Drawer", {
@@ -63,10 +39,10 @@ Object.defineProperty(exports, "Drawer", {
     return _Drawer.default;
   }
 });
-Object.defineProperty(exports, "RichEditor", {
+Object.defineProperty(exports, "IconButton", {
   enumerable: true,
   get: function get() {
-    return _RichEditor.default;
+    return _IconButton.default;
   }
 });
 Object.defineProperty(exports, "Input", {
@@ -75,22 +51,10 @@ Object.defineProperty(exports, "Input", {
     return _Input.default;
   }
 });
-Object.defineProperty(exports, "Password", {
+Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
-    return _Password.default;
-  }
-});
-Object.defineProperty(exports, "Textarea", {
-  enumerable: true,
-  get: function get() {
-    return _Textarea.default;
-  }
-});
-Object.defineProperty(exports, "Loading", {
-  enumerable: true,
-  get: function get() {
-    return _Loading.default;
+    return _Loader.default;
   }
 });
 Object.defineProperty(exports, "Menu", {
@@ -105,58 +69,16 @@ Object.defineProperty(exports, "MenuItem", {
     return _MenuItem.default;
   }
 });
-Object.defineProperty(exports, "SelectMenu", {
+Object.defineProperty(exports, "Textarea", {
   enumerable: true,
   get: function get() {
-    return _MenuItem.default;
+    return _Textarea.default;
   }
 });
-Object.defineProperty(exports, "AccordionMenu", {
+Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
-    return _AccordionMenu.default;
-  }
-});
-Object.defineProperty(exports, "Modal", {
-  enumerable: true,
-  get: function get() {
-    return _Modal.Modal;
-  }
-});
-Object.defineProperty(exports, "ModalComponent", {
-  enumerable: true,
-  get: function get() {
-    return _Modal.ModalComponent;
-  }
-});
-Object.defineProperty(exports, "Notification", {
-  enumerable: true,
-  get: function get() {
-    return _Notification.default;
-  }
-});
-Object.defineProperty(exports, "Paginate", {
-  enumerable: true,
-  get: function get() {
-    return _Paginate.default;
-  }
-});
-Object.defineProperty(exports, "Tag", {
-  enumerable: true,
-  get: function get() {
-    return _Tag.Tag;
-  }
-});
-Object.defineProperty(exports, "TagPreview", {
-  enumerable: true,
-  get: function get() {
-    return _TagPreview.default;
-  }
-});
-Object.defineProperty(exports, "Tooltip", {
-  enumerable: true,
-  get: function get() {
-    return _Tooltip.default;
+    return _Toggle.default;
   }
 });
 Object.defineProperty(exports, "Flex", {
@@ -172,53 +94,31 @@ Object.defineProperty(exports, "Grid", {
   }
 });
 
-var _Badge = _interopRequireDefault(require("./components/Badge"));
+var _AccordionDropdown = _interopRequireDefault(require("./components/Accordion/AccordionDropdown"));
 
-var _Banner = _interopRequireDefault(require("./components/Banner"));
+var _AccordionTitle = _interopRequireDefault(require("./components/Accordion/AccordionTitle"));
 
-var _Button = _interopRequireDefault(require("./components/btn/Button"));
+var _Accordion = _interopRequireDefault(require("./components/Accordion/Accordion"));
 
-var _IconButton = _interopRequireDefault(require("./components/btn/IconButton"));
+var _Button = _interopRequireDefault(require("./components/Button/Button"));
 
-var _Toggle = _interopRequireDefault(require("./components/btn/Toggle"));
+var _Card = _interopRequireDefault(require("./components/Card/Card"));
 
-var _Breadcrumbs = _interopRequireDefault(require("./components/Breadcrumbs"));
+var _Drawer = _interopRequireDefault(require("./components/Drawer/Drawer"));
 
-var _ButtonBar = _interopRequireDefault(require("./components/ButtonBar"));
+var _IconButton = _interopRequireDefault(require("./components/Button/IconButton"));
 
-var _Checkbox = _interopRequireDefault(require("./components/Checkbox"));
+var _Input = _interopRequireDefault(require("./components/Input/Input"));
 
-var _Codeblock = _interopRequireDefault(require("./components/Codeblock"));
+var _Loader = _interopRequireDefault(require("./components/Loader/Loader"));
 
-var _Drawer = _interopRequireDefault(require("./components/Drawer"));
+var _Menu = _interopRequireDefault(require("./components/Menu/Menu"));
 
-var _RichEditor = _interopRequireDefault(require("./components/editor/RichEditor"));
+var _MenuItem = _interopRequireDefault(require("./components/Menu/MenuItem"));
 
-var _Input = _interopRequireDefault(require("./components/input/Input"));
+var _Textarea = _interopRequireDefault(require("./components/Input/Textarea"));
 
-var _Password = _interopRequireDefault(require("./components/input/Password"));
-
-var _Textarea = _interopRequireDefault(require("./components/input/Textarea"));
-
-var _Loading = _interopRequireDefault(require("./components/Loading"));
-
-var _Menu = _interopRequireDefault(require("./components/menu/Menu"));
-
-var _MenuItem = _interopRequireDefault(require("./components/menu/MenuItem"));
-
-var _AccordionMenu = _interopRequireDefault(require("./components/menu/accordion/AccordionMenu"));
-
-var _Modal = require("./components/Modal");
-
-var _Notification = _interopRequireDefault(require("./components/Notification"));
-
-var _Paginate = _interopRequireDefault(require("./components/Paginate"));
-
-var _Tag = require("./components/tag/Tag");
-
-var _TagPreview = _interopRequireDefault(require("./components/tag/TagPreview"));
-
-var _Tooltip = _interopRequireDefault(require("./components/Tooltip"));
+var _Toggle = _interopRequireDefault(require("./components/Toggle/Toggle"));
 
 var _Flex = _interopRequireDefault(require("./components/layout/Flex"));
 

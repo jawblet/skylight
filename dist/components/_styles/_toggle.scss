@@ -23,8 +23,8 @@
         transform: translate(0, -50%);
     }
     &--on {
-        background-color: $accent;
-        border-color: $accent;
+        background-color: $orange;
+        border-color: $orange;
         justify-content: flex-end;
         &.toggle::after {
             @extend %switch;

@@ -14,7 +14,7 @@
     transition: all $shortest-fade;
     &:hover {
         color: $body; 
-        background-color: $accent; 
+        background-color: $orange; 
     }
 }
 
@@ -26,8 +26,9 @@
     }
     &__item {
         @extend %menuItem;
+        list-style: none;
         &--active {
-            background-color: $accent;
+            background-color: $orange;
         }
         &--dropdown {
             border-radius: 0;
@@ -42,11 +43,11 @@
     position: absolute;
     z-index: 2;
     min-width: 10rem;
-    & > li:first-child {
+    & > :first-child {
         border-top-left-radius: $border-small;
         border-top-right-radius: $border-small;
     }
-    & > li:last-child {
+    & > :last-child {
         border-bottom-left-radius: $border-small;
         border-bottom-right-radius: $border-small;
     }

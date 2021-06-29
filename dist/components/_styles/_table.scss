@@ -6,11 +6,7 @@ tbody {
 
 .table {
     display: grid;
-    grid-auto-rows:3rem;
-    grid-auto-columns:3rem;
     &__cell {
-        text-align: left; 
-        text-overflow: ellipsis;
         padding: 1rem;
     }
 }
@@ -24,6 +20,5 @@ tr {
 thead th {
     background: $sand2;
 }
-
 
 // https://adamlynch.com/flexible-data-tables-with-css-grid/

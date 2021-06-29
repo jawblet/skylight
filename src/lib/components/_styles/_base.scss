@@ -1,17 +1,3 @@
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap');
-
-@font-face {
-  font-family: 'Graphik';
-  src: url(./assets/Graphik/Graphik.otf);
-} 
-
-@font-face {
-  font-family: 'Graphik-Light';
-  src: url(./assets/Graphik/Graphik-Extralight.otf);
-}
-
-/* base styles */
 *,
 *::after,
 *::before{
@@ -28,15 +14,20 @@ ul, ol > * {
 html {
     box-sizing: border-box;
     font-size: 90%;
-    line-height: 1;
     width: 100%;
     color: $body;
-    background: $off-white;
+    background: $off-white; 
+  }
+
+  body {
+    line-height: normal;
+    font-family: sans-serif;
+    font-size: 1rem;
   }
 
 //highlight 
 ::selection {
-    background-color: $accent;
+    background-color: $orange;
   }
 
 blockquote {
@@ -50,19 +41,19 @@ blockquote {
 /* text styles */
 h1 { 
   font-size: 1.8rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
 }
 
 h2 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.5px;
 }
 
 h3 {
-  font-family: 'Graphik', sans-serif;
+  font-family: sans-serif;
   font-size: 1.3rem;
   letter-spacing: 1.5px;
   font-weight: 400;
@@ -70,7 +61,7 @@ h3 {
 }
 
 h4, button, li, th {
-    font-family: 'Graphik', sans-serif; 
+    font-family: sans-serif; 
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -80,8 +71,8 @@ h4, button, li, th {
     }
   }
 
-h5, figcaption {
-  font-family: 'Work Sans', sans-serif;
+h5, figcaption, td {
+  font-family: sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
 }
@@ -89,14 +80,12 @@ h5, figcaption {
 h6 { 
   font-size: .7rem;
   letter-spacing: 0.5px;
-  font-family: 'Graphik', sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
 }
 
-p, label, body {
-  font-family: 'Graphik', sans-serif;
-  font-size: 1rem;
-  line-height: 130%;
+p, label {
+  line-height: 200%;
 }
 
 code, pre {
@@ -109,11 +98,12 @@ a {
   text-decoration: none;
   color: $body-light;
   cursor: pointer;
+  margin: 0 !important;
 } 
 
 //remove and change default styling
 input, textarea {
-  font-family: 'Graphik', sans-serif;
+  font-family: sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   color: $body;
@@ -133,14 +123,11 @@ button {
     }
   }
 
-  textarea {
-    resize: none; //disable user resizing
-  }
+//disable user resizing
+textarea { resize: none; }
 
 //do not set ul and ol because of draft-js
-menu {
-    list-style: none;
-}
+menu { list-style: none; }
 
 hr {
     clear:both;

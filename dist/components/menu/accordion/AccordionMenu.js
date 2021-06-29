@@ -13,12 +13,27 @@ var _AccordionPanel = _interopRequireDefault(require("./AccordionPanel"));
 
 var _MenuItem = _interopRequireDefault(require("../MenuItem"));
 
+var _propTypes = require("prop-types");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Ugh I think this whole thing need to be refactored or smth 
 const AccordionMenu = (_ref) => {
   let {
     panels
   } = _ref;
+  AccordionMenu.propTypes = {
+    panels: _propTypes.PropTypes.shape({
+      label: _propTypes.PropTypes.string.isRequired,
+      items: _propTypes.PropTypes.array.isRequired,
+      checked: _propTypes.PropTypes.bool
+    })
+  };
+  AccordionMenu.defaultProps = {
+    panels: {
+      checked: true
+    }
+  };
   return /*#__PURE__*/_react.default.createElement(_Menu.default, {
     items: panels.length
   }, panels.map((panel, i) => {

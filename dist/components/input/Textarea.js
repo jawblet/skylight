@@ -13,6 +13,12 @@ var _Flex = _interopRequireDefault(require("../layout/Flex"));
 
 var _autosize = _interopRequireDefault(require("autosize"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+require("./Input.css");
+
+require("../_global.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -27,9 +33,10 @@ const Textarea = props => {
     }
 
     return (0, _autosize.default)(descriptionRef.current);
-  }, []);
+  }, [props.autosize]);
   return /*#__PURE__*/_react.default.createElement(_Flex.default, {
-    column: true
+    column: true,
+    width: props.width
   }, props.label && /*#__PURE__*/_react.default.createElement("h6", {
     style: {
       marginLeft: '0.5rem'
@@ -37,11 +44,12 @@ const Textarea = props => {
   }, props.label), /*#__PURE__*/_react.default.createElement("textarea", {
     type: "text",
     ref: descriptionRef,
-    className: "input",
+    className: "input ".concat(props.inline ? 'input--inline' : '', "\n                ").concat(props.fail ? "input--fail" : '', "\n                ").concat(props.className),
     name: props.name,
     value: props.value,
     placeholder: props.placeholder,
     disabled: props.disabled,
+    readOnly: props.readOnly,
     onClick: props.handleClickIn,
     onBlur: props.handleBlur,
     onChange: props.handleChange,
@@ -51,5 +59,54 @@ const Textarea = props => {
   }));
 };
 
+Textarea.propTypes = {
+  /** Textarea label */
+  label: _propTypes.default.string.isRequired,
+
+  /** If the textarea is inline */
+  inline: _propTypes.default.bool,
+
+  /** Failed state */
+  fail: _propTypes.default.bool,
+
+  /** Number of initial rows */
+  rows: _propTypes.default.number,
+
+  /** Name */
+  name: _propTypes.default.string,
+
+  /** Value */
+  name: _propTypes.default.string,
+
+  /** Placeholder */
+  placeholder: _propTypes.default.string,
+
+  /** Disabled state */
+  disabled: _propTypes.default.bool,
+
+  /** Read-only state */
+  fail: _propTypes.default.bool,
+
+  /** Function to call onClick*/
+  handleClick: _propTypes.default.func,
+
+  /** Function to call onBlur*/
+  handleBlur: _propTypes.default.func,
+
+  /** Function to call onKeydown*/
+  handleKeyDown: _propTypes.default.func,
+
+  /** Function to call onChange*/
+  handleChange: _propTypes.default.func,
+
+  /** Custom classname */
+  className: _propTypes.default.string,
+
+  /** Custom styles */
+  style: _propTypes.default.object
+};
+Textarea.defaultProps = {
+  rows: 1
+};
 var _default = Textarea;
 exports.default = _default;

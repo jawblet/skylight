@@ -1,11 +1,11 @@
 import React from 'react';
-import { VscArrowLeft, VscArrowRight } from 'react-icons/vsc'; 
-
+import { VscArrowLeft, VscArrowRight } from 'react-icons/vsc';
+import PropTypes from 'prop-types';
 
 const Paginate = (props) => {
     const { pageState, handleClick } = props; 
     const { page, totalPages, prevPage, nextPage } = pageState;
-     
+
     return ( 
         <>
         {(totalPages && totalPages > 1) ?
@@ -27,6 +27,19 @@ const Paginate = (props) => {
                 }
              </>
          )
+}
+
+Paginate.propTypes = {
+    /** Current page */
+    page: PropTypes.number,
+    /** Total pages */
+    totalPages: PropTypes.number,
+    /**If the item is a part of a dropdown menu*/
+    prevPage: PropTypes.bool,
+    /**If the item is a part of a dropdown menu*/
+    nextPage: PropTypes.bool,
+    /** Function to call onClick */
+    handleClick: PropTypes.func,
 }
  
 export default Paginate;

@@ -1,4 +1,5 @@
 //base settings 
+@import "colors"; 
 @import "variables"; 
 @import "base"; 
 @import "utils";
@@ -24,6 +25,7 @@
 @import "codeblock";
 @import "confirmpass";
 @import "editor";
+@import "grid";
 @import "input"; 
 @import "notification";
 @import "loading";
@@ -34,11 +36,11 @@
 @import "tag"; 
 @import "toggle"; 
 @import "inbox";
+@import "panel";
 @import "popup";
 @import "dnd";
 @import "search";
 @import "table";
 @import "toolbar";
 @import "tooltip";
-
 

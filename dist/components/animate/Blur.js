@@ -20,7 +20,7 @@ const Blur = props => {
   return /*#__PURE__*/_react.default.createElement(_reactTransitionGroup.CSSTransition, {
     in: props.in,
     timeout: 150,
-    classNames: "zoom",
+    classNames: "blur",
     nodeRef: nodeRef,
     unmountOnExit: true
   }, /*#__PURE__*/_react.default.createElement("div", {

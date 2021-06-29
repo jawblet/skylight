@@ -16,7 +16,7 @@ function useSelectOne(initState, listItems) {
     //remove selected item from list
     const newItems = listItems.filter(item => item !== selectItem);
     setList(newItems);
-  }, [selectItem]);
+  }, [selectItem, listItems]);
 
   const handleSelect = e => {
     setSelectItem(e.currentTarget.dataset.id);

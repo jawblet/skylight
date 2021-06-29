@@ -1,14 +1,21 @@
 .badge {
-    padding: 5px;
-    font-size: 1.1rem;
-    background-color: $accent2;
-    border-radius: 1px;
-    color: $off-white;
-    height: 1.5rem;
-    min-width: 1.5rem;
-    line-height: 100%; // center text 
-    cursor: pointer;
-    &--none {
-      background-color: $body-lightest;
-    } 
+  font-size: 1.1rem;
+  background-color: $orange;
+  border-radius: 1px;
+  color: $off-white;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  &--none {
+    background-color: $body-lightest;
+  } 
+  &__number {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    letter-spacing: 0;
+    height: 0.65rem; // hmph 
   }
+}

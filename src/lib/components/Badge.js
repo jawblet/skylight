@@ -1,12 +1,27 @@
-import React from 'react'; 
-import Flex from './layout/Flex';
+import React, { forwardRef } from 'react'; 
+import PropTypes from 'prop-types';
 
-const Badge = ({ value }) => {
+const Badge = forwardRef((props, ref) => {
+
+    Badge.propTypes = {
+        /** Custom classname */ 
+        className: PropTypes.string,
+         /** Function to call onClick*/
+        handleClick: PropTypes.func,
+        /** Number to display in badge */
+        value: PropTypes.number
+    }
+
     return (
-            <Flex center middle className={`badge ${!value ? 'badge--none' :''} `}>
-                <h4 className="heavy">{value || 0}</h4>
-            </Flex>
-    );
-}
- 
+        <div className={`badge ${!props.value ? 'badge--none' :''} 
+                ${props.className}`}
+            onClick={props.handleClick} 
+            ref={ref}>
+                <h4 className="heavy badge__number"> 
+                    {props.value || 0}
+                </h4>            
+        </div>
+    )
+})
+
 export default Badge;

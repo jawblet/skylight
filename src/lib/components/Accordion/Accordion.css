@@ -1,0 +1,40 @@
+.accordion__label {
+    padding: 0.5rem;
+    padding-top: 0;
+    font-weight: bold; 
+}
+
+.accordion {
+    overflow: hidden;}
+    .accordion__input {
+      display: none; }
+    .accordion__label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      cursor: pointer; }
+      .accordion__label::after {
+        content: "+";
+        color: #776B5E;
+        position: relative;
+        margin-left: 0.5rem;
+        top: 50%; }
+    .accordion__list {
+      list-style: none;
+      max-height: 0rem;
+      transition: all 0.35s; }
+  
+  input:checked + .accordion__label::after {
+    content: "-";
+    color: #776B5E;
+    position: relative;
+    top: 50%;
+   /* transform: rotate(-180deg);
+    transition: all 0.35s; */
+}
+  
+  input:checked ~ .accordion__list {
+    max-height: 200vh; 
+    padding-bottom: 0.5rem;
+}

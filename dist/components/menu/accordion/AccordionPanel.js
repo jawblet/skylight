@@ -30,7 +30,7 @@ const AccordionPanel = (_ref) => {
   }), /*#__PURE__*/_react.default.createElement("label", {
     className: "accordion__label",
     htmlFor: "".concat(panel.label)
-  }, /*#__PURE__*/_react.default.createElement("h4", null, " ", panel.label, " ")), /*#__PURE__*/_react.default.createElement("menu", {
+  }, /*#__PURE__*/_react.default.createElement("h4", null, panel.label)), /*#__PURE__*/_react.default.createElement("menu", {
     className: "accordion__list"
   }, props.children));
 };

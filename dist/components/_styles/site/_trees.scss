@@ -1,17 +1,27 @@
 .tree {
-    outline: 3px solid $accent;
+    outline: 3px solid $orange;
     position: relative;
-    width: auto;
     z-index: 5;
     &__name {
         position: absolute;
         top: -1.1rem;
-        color: $accent3;
+        color: $orange2;
         right: 0;
-    }
-    &__label {
+        z-index: 3;
+        &--left { left: 0; }
+        &--bottom { top: 0; }
     }
     &__tag {
         color: darkblue;
     }
+}
+
+.treebranch * {
+    outline: 3px solid $orange;
+    position: relative;
+    z-index: 5;
+}
+
+.blur {
+    outline: none;
 }

@@ -1,0 +1,17 @@
+.grid {
+    height: 10rem;
+    width: 10rem;
+    background-size: 1rem 1rem;
+    background-image:
+      linear-gradient(to right, $shadow 1px, transparent 1px),
+      linear-gradient(to bottom, $shadow 1px, transparent 1px);
+    border-bottom: 1px solid $shadow;
+    border-right: 1px solid $shadow;
+ }
+
+ .dotgrid {
+  height: 10rem;
+  width: 10rem;
+  background-size: 1rem 1rem;
+  background-image: radial-gradient(circle, $body-lightest 1px, transparent 1px);
+}
