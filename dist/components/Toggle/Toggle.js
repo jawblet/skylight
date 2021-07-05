@@ -11,6 +11,10 @@ var _Flex = _interopRequireDefault(require("../layout/Flex"));
 
 var _propTypes = require("prop-types");
 
+require("./Toggle.css");
+
+require("../_global.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Toggle = props => {

@@ -14,6 +14,8 @@ const Input = (props) => {
         }
     }, [props.autofocus]);
 
+    const style = {...props.style, width:props.width};
+
     return (
             <Flex column>
                 {props.label && 
@@ -21,7 +23,7 @@ const Input = (props) => {
                     {props.label}
                 </h6>}
                 <Flex>
-                    <input 
+                    <input ref={inputRef}
                         type={props.type}
                         className={`input ${props.inline ? 'input--inline' : ''}
                             ${props.fail ? "input--fail" : ''}
@@ -36,7 +38,7 @@ const Input = (props) => {
                         onBlur={props.handleBlur}
                         size={props.size}
                         readOnly={props.readOnly}
-                        style={props.style}
+                        style={style}
                     />  
                 </Flex>
             </Flex>       
@@ -45,7 +47,7 @@ const Input = (props) => {
 
 Input.propTypes = {
     /** Textarea label */ 
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     /** If the textarea is inline */ 
     inline: PropTypes.bool,
     /** Failed state */ 
@@ -55,13 +57,15 @@ Input.propTypes = {
     /** Name */
     name: PropTypes.string,
     /** Value */
-    name: PropTypes.string,
+    value: PropTypes.string,
     /** Placeholder */
     placeholder: PropTypes.string,
     /** Disabled state */ 
     disabled: PropTypes.bool,
     /** Read-only state */ 
-    fail: PropTypes.bool,
+    readOnly: PropTypes.bool,
+    /** If input autofocuses */ 
+    autofocus: PropTypes.bool,
     /** Function to call onClick*/
     handleClick: PropTypes.func,
     /** Function to call onBlur*/
@@ -72,13 +76,14 @@ Input.propTypes = {
     handleChange: PropTypes.func,
     /** Custom classname */ 
     className: PropTypes.string,
+    /** Width */
+    width: PropTypes.string,
     /** Custom styles */ 
     style: PropTypes.object,
 }
+
+Input.defaultProps = {
+    width: "100%"
+}
  
 export default Input;
-
-/*
-  {props.showPass && 
-    <ShowPass {...props}/>} 
-*/

@@ -3,85 +3,57 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SandTag = exports.AccentTag = exports.Tag = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _vsc = require("react-icons/vsc");
 
+var _propTypes = require("prop-types");
+
+require("./Tag.css");
+
+require("../_global.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-const accent = {
-  backgroundColor: "var(--accent)",
-  color: "var(--accent3)"
-};
-const sand = {
-  backgroundColor: "var(--sand2)",
-  color: "var(--body-light)"
-};
-
-const Tag = (_ref) => {
-  let {
-    color,
-    bg,
-    chip
-  } = _ref,
-      props = _objectWithoutProperties(_ref, ["color", "bg", "chip"]);
-
+const Tag = props => {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "tag",
+    className: "tag ".concat(props.style ? props.style : ""),
     style: {
-      backgroundColor: bg,
-      color: color
+      backgroundColor: props.bg,
+      color: props.color
     }
-  }, props.children, chip && /*#__PURE__*/_react.default.createElement(_vsc.VscClose, {
+  }, props.children, props.chip && /*#__PURE__*/_react.default.createElement(_vsc.VscClose, {
     className: "tag__X",
     onClick: props.handleClick,
     style: {
-      color: color
+      color: props.color
     }
   }));
 };
 
-exports.Tag = Tag;
+Tag.propTypes = {
+  /** Background color */
+  bg: _propTypes.PropTypes.string,
 
-const AccentTag = (_ref2) => {
-  let {
-    chip
-  } = _ref2,
-      props = _objectWithoutProperties(_ref2, ["chip"]);
+  /** Color */
+  color: _propTypes.PropTypes.string,
 
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "tag",
-    style: accent
-  }, props.children, chip && /*#__PURE__*/_react.default.createElement(_vsc.VscClose, {
-    className: "tag__X",
-    onClick: props.handleClick,
-    style: {
-      color: accent.color
-    }
-  }));
+  /** Children */
+  children: _propTypes.PropTypes.node,
+
+  /** Kind of tag style */
+  kind: _propTypes.PropTypes.oneOf(['highlight', 'lowlight', 'neutral', 'dark']),
+
+  /** If the tag is a chip */
+  chip: _propTypes.PropTypes.bool,
+
+  /** Function to call onClick */
+  handleClick: _propTypes.PropTypes.func
 };
-
-exports.AccentTag = AccentTag;
-
-const SandTag = (_ref3) => {
-  let {
-    chip
-  } = _ref3,
-      props = _objectWithoutProperties(_ref3, ["chip"]);
-
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "tag",
-    style: sand
-  }, props.children, chip && /*#__PURE__*/_react.default.createElement(_vsc.VscClose, {
-    className: "tag__X",
-    onClick: props.handleClick
-  }));
+Tag.defaultProps = {
+  style: 'neutral'
 };
-
-exports.SandTag = SandTag;
+var _default = Tag;
+exports.default = _default;

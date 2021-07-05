@@ -1,24 +1,23 @@
 .input {
-    width: 100%;
-    background-color: #FAF3ED;
-    border: 3px solid #FAF3ED;
+    background-color: var(--sand);
+    border: 3px solid var(--sand);
     border-radius: 0.5rem;
     padding: 0.5rem;
     transition: all 0.35s; }
     .input:focus {
-      border: 3px solid #EFDDC8; }
+      border: 3px solid var(--sand3); }
     .input--inline {
       background-color: inherit;
       border: 3px solid transparent;
       padding-left: 0; }
     .input--fail {
-      border: 3px solid #eb8c6f; }
+      border: 3px solid var(--error-light); }
       .input--fail:focus {
-        border: 3px solid #973618; }
+        border: 3px solid var(--error); }
     .input::placeholder {
-      color: #C7BEB6; }
+      color: var(--body-lightest); }
     .input:disabled {
-      border-color: #C7BEB6;
-      background-color: #ebe9e5;
+      border-color: var(--body-lightest);
+      background-color: var(--shadow);
       cursor: not-allowed; 
     }

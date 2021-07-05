@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const TableHeader = (_ref) => {
+const TableHeader = _ref => {
   let {
     headings
   } = _ref;

@@ -1,0 +1,19 @@
+.badge {
+    font-size: 1.1rem;
+    background-color: var(--acc1-light);
+    border-radius: 1px;
+    color: var(--off-white);
+    height: 1.5rem;
+    min-width: 1.5rem;
+    cursor: pointer;
+    position: relative; }
+    .badge--none {
+      background-color: var(--body-lightest); }
+    .badge__number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      letter-spacing: 0;
+      height: 0.65rem; 
+}

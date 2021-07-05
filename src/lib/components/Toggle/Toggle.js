@@ -1,6 +1,8 @@
 import React from 'react';
 import Flex from '../layout/Flex';
 import { PropTypes } from 'prop-types';
+import './Toggle.css';
+import '../_global.css';
 
 const Toggle = (props) => {
     return ( 

@@ -14,6 +14,6 @@
     display: inline-block;
     width: .5rem;
     height: 1rem;
-    background-color: #312F2C;
+    background-color: var(--body);
     animation: loadblink 1s infinite; 
 }

@@ -1,0 +1,38 @@
+.bold { font-weight: bold; }
+.light { color: var(--body-light); }
+.lightest { color: var(--body-lightest); }
+
+.padS { padding: 1rem; }
+.padM { padding: 1.5rem; }
+.padL { padding: 3rem; } 
+
+.padBottomXXS { padding-bottom: 5px;}
+.padBottomXS { padding-bottom: 0.5rem;}
+.padBottomS { padding-bottom: 1rem; }
+.padBottomM { padding-bottom: 1.5rem; }
+.padBottomL { padding-bottom: 3rem; }
+
+.noMar { margin: 0 }
+.marBottomXXS { margin-bottom: 5px; }
+.marBottomXS { margin-bottom: 0.5rem; }
+.marBottomS { margin-bottom: 1rem; }
+.marBottomM { margin-bottom: 1.5rem; }
+.marBottomL { margin-bottom: 3rem; }
+
+.padAllBottomXS > * { padding-bottom: 0.5rem }
+.padAllBottomS > * { padding-bottom: 1rem; }
+.padAllBottomM > * { padding-bottom: 3rem; }
+.padAllBottomL > * { padding-bottom: 3rem; }
+
+.noMarChildren > * { margin: 0rem; }
+.marChildrenS > * { margin-bottom: 1rem; }
+.marChildrenM > * { margin-bottom: 1.5rem; }
+
+.border {border: 1px solid var(--body);} 
+.noBorder {border: 1px solid transparent;} 
+
+.pointer {  cursor: pointer; }
+.relative { position: relative; }
+.nowrap { white-space: nowrap; }
+.shadow { box-shadow: var(--soft-shadow); }
+

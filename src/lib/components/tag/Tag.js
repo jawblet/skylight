@@ -1,44 +1,39 @@
 import React from 'react'; 
 import { VscClose } from 'react-icons/vsc';
+import { PropTypes } from 'prop-types';
+import "./Tag.css";
+import "../_global.css";
 
-const accent = {
-    backgroundColor: `var(--accent)`,
-    color: `var(--accent3)`,
-}
-
-const sand = { 
-    backgroundColor: `var(--sand2)`,
-    color: `var(--body-light)`,
-}
-
-export const Tag = ({ color, bg, chip, ...props }) => {
+const Tag = (props) => { 
     return (
-        <div className='tag' style={{backgroundColor:bg, color: color}}> 
+        <div className={`tag ${props.style ? props.style : ""}`} 
+            style={{backgroundColor:props.bg, color: props.color }}> 
             {props.children}
-            {chip &&  <VscClose className="tag__X" onClick={props.handleClick}
-                        style={{color:color}}
+            {props.chip &&  
+                <VscClose className="tag__X" onClick={props.handleClick}
+                        style={{color: props.color}}
                     />}
         </div> 
     );
-};
-
-export const AccentTag = ({ chip, ...props }) => {
-    return (
-        <div className="tag" style={accent}>
-            {props.children}
-            {chip &&  <VscClose className="tag__X" onClick={props.handleClick}
-                style={{color:accent.color}}/>}
-        </div>
-    )
 }
 
-export const SandTag = ({ chip, ...props }) => {
-    return (
-        <div className="tag" style={sand}>
-            {props.children} 
-            {chip &&  <VscClose className="tag__X" onClick={props.handleClick}/>}
-        </div>
-    )
+Tag.propTypes = {
+    /** Background color */ 
+    bg: PropTypes.string,
+    /** Color */
+    color: PropTypes.string,
+    /** Children */
+    children: PropTypes.node,
+    /** Kind of tag style */
+    kind: PropTypes.oneOf(['highlight', 'lowlight', 'neutral', 'dark']),
+    /** If the tag is a chip */ 
+    chip: PropTypes.bool,
+    /** Function to call onClick */
+    handleClick: PropTypes.func,
 }
 
+Tag.defaultProps = {
+    style: 'neutral'
+}
 
+export default Tag;

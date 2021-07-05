@@ -1,24 +1,22 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 const Flex = (props) => {
-    //initialize axis
-    let mainAxis = "flex-start";
-    let crossAxis = "stretch";
+    let mainAxis;
+    let crossAxis;
 
     const getFlex = (props) => {
         const {
-            inline, // flex or flex-inline  
-            column, // row or column 
-
-            left, // justify-content: start 
-            center, // justify-content: center
-            right, // justify-content: right
-            between, // justify-content: space-between
-            around, // justify-content: space-around
-
-            top, // align-items: start 
-            middle, // align-items: center 
-            bottom, // align-items: end 
+            inline, 
+            column, 
+            left, 
+            center, 
+            right, 
+            between, 
+            around, 
+            top, 
+            middle, 
+            bottom,
             gap 
           } = props;
 
@@ -44,6 +42,8 @@ const Flex = (props) => {
             crossAxis = "center";
             } else if (bottom) {
             crossAxis = "flex-end";
+            } else {
+            crossAxis = "stretch"
             }
         }
 
@@ -95,6 +95,50 @@ const Flex = (props) => {
             {props.children}
         </div>
     );
+}
+
+Flex.propTypes = {
+    /** Flex or inline-flex  */
+    inline: PropTypes.bool,
+    /** Row or column */ 
+    column: PropTypes.bool,
+    /** Wrap or no wrap */
+    wrap: PropTypes.bool,
+    /** Justify-content: start  */ 
+    left: PropTypes.bool,
+    /** Justify-content: center */
+    center: PropTypes.bool,
+    /** Justify-content: right */  
+    right: PropTypes.bool,
+    /** Justify-content: space-between */
+    between: PropTypes.bool,
+    /**  Justify-content: space-around */ 
+    around: PropTypes.bool,
+    /**  Align-items: start */ 
+    top: PropTypes.bool,
+    /** Align-items: center */
+    middle: PropTypes.bool,
+    /** Align-items: end  */
+    bottom: PropTypes.bool, 
+    /** Gap */
+    gap: PropTypes.number, 
+    /** Height */
+    height: PropTypes.string, 
+    /** Width */
+    width: PropTypes.string,
+    /** Function to call onClick*/
+    handleClick: PropTypes.func,
+    /** Data id */ 
+    id: PropTypes.node,
+    /** Custom classname */ 
+    className: PropTypes.string, 
+}
+
+Flex.defaultProps = {
+    inline: false,
+    column: false,
+    wrap: false,
+    gap: 0
 }
  
 export default Flex;

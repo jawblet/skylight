@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = require("prop-types");
+
 require("./Accordion.css");
 
 require("../_global.css");
@@ -22,5 +24,9 @@ const Accordion = props => {
   }, props.children);
 };
 
+Accordion.propTypes = {
+  width: _propTypes.PropTypes.string,
+  children: _propTypes.PropTypes.node.isRequired
+};
 var _default = Accordion;
 exports.default = _default;

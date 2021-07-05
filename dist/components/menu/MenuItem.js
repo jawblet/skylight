@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Item = props => {
   return /*#__PURE__*/_react.default.createElement("li", {
-    className: "menu__item \n            ".concat(props.dropdown ? 'menu__item--dropdown' : '', " \n            ").concat(props.active ? 'menu__item--active' : '', " "),
+    className: "\n            ".concat(props.nav ? 'nav__item' : 'menu__item', "\n            ").concat(props.dropdown ? 'menu__item--dropdown' : '', " \n            ").concat(props.active ? 'menu__item--active' : '', " "),
     onClick: props.handleClick,
     value: props.value,
     style: props.style
@@ -28,7 +28,7 @@ const MenuItem = props => {
   if (props.nav) {
     return /*#__PURE__*/_react.default.createElement(_reactRouterDom.NavLink, {
       to: props.path,
-      activeClassName: "menu__item--active"
+      activeClassName: "nav__item--active"
     }, /*#__PURE__*/_react.default.createElement(Item, props));
   }
 

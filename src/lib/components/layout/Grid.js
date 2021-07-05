@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 const Grid = (props) => {
 
@@ -31,5 +32,36 @@ const Grid = (props) => {
         </div>
     );
 }
+ 
+Grid.propTypes = {
+    /** Grid or inline-grid  */
+    inline: PropTypes.bool,
+    /** Columns, ex. "minmax(10px, 1fr) 3fr", "repeat(5, 1fr)" */
+    columns: PropTypes.string,
+    /** Rows, ex. "min-content 1fr min-content", "15rem 1fr" */
+    rows: PropTypes.string,
+    /** Align items along grid main axis */
+    justify: PropTypes.oneOf(['start', 'end', 'center', 'stretch']),
+    /** Align items along grid cross axis*/
+    align: PropTypes.oneOf(['start', 'end', 'center', 'stretch']),
+    /** Gap */
+    gap: PropTypes.number, 
+    /** Width */
+    width: PropTypes.string,
+    /** Custom classname */ 
+    className: PropTypes.string 
+}
+
+/*
+Grid.defaultProps = {
+    columns: "none",
+    rows: "none",
+    justify: "stretch",
+    align: "stretch",
+    inline: false,
+    width: "100%",
+    gap: 0
+}
+*/
  
 export default Grid;

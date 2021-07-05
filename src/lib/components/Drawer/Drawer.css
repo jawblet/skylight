@@ -4,9 +4,9 @@
     position: absolute;
     z-index: 2;
     min-width: 10rem; 
-    background-color: #FAF3ED;
+    background-color: var(--sand);
     border-radius: 0.5rem;
-    border: 1px solid #EFDDC8; 
+    border: 1px solid var(--sand3); 
 }
     .dropdown > :first-child {
       border-top-left-radius: 0.5rem;

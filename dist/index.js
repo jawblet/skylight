@@ -21,6 +21,18 @@ Object.defineProperty(exports, "Accordion", {
     return _Accordion.default;
   }
 });
+Object.defineProperty(exports, "Badge", {
+  enumerable: true,
+  get: function get() {
+    return _Badge.default;
+  }
+});
+Object.defineProperty(exports, "Banner", {
+  enumerable: true,
+  get: function get() {
+    return _Banner.default;
+  }
+});
 Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
@@ -69,6 +81,12 @@ Object.defineProperty(exports, "MenuItem", {
     return _MenuItem.default;
   }
 });
+Object.defineProperty(exports, "Tag", {
+  enumerable: true,
+  get: function get() {
+    return _Tag.default;
+  }
+});
 Object.defineProperty(exports, "Textarea", {
   enumerable: true,
   get: function get() {
@@ -79,6 +97,12 @@ Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
     return _Toggle.default;
+  }
+});
+Object.defineProperty(exports, "Paginate", {
+  enumerable: true,
+  get: function get() {
+    return _Paginate.default;
   }
 });
 Object.defineProperty(exports, "Flex", {
@@ -100,6 +124,10 @@ var _AccordionTitle = _interopRequireDefault(require("./components/Accordion/Acc
 
 var _Accordion = _interopRequireDefault(require("./components/Accordion/Accordion"));
 
+var _Badge = _interopRequireDefault(require("./components/Badge/Badge"));
+
+var _Banner = _interopRequireDefault(require("./components/Banner/Banner"));
+
 var _Button = _interopRequireDefault(require("./components/Button/Button"));
 
 var _Card = _interopRequireDefault(require("./components/Card/Card"));
@@ -116,9 +144,13 @@ var _Menu = _interopRequireDefault(require("./components/Menu/Menu"));
 
 var _MenuItem = _interopRequireDefault(require("./components/Menu/MenuItem"));
 
+var _Tag = _interopRequireDefault(require("./components/Tag/Tag"));
+
 var _Textarea = _interopRequireDefault(require("./components/Input/Textarea"));
 
 var _Toggle = _interopRequireDefault(require("./components/Toggle/Toggle"));
+
+var _Paginate = _interopRequireDefault(require("./components/Paginate/Paginate"));
 
 var _Flex = _interopRequireDefault(require("./components/layout/Flex"));
 

@@ -1,0 +1,15 @@
+.tag {
+    position: relative;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    transition: all 0.35s;
+    break-inside: avoid; 
+}
+.tag__X {
+      font-size: 0.9rem;
+      margin-left: 5px;
+      cursor: pointer; 
+}

@@ -1,57 +1,60 @@
-.btn, .iconbutton, .inlinebutton {
-    min-width: 3rem;
-    padding: 0 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.35s;
-    position: relative;
-    height: 3rem; }
-    .btn:disabled, .iconbutton:disabled, .inlinebutton:disabled {
+.btn, .iconbutton {
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.35s;
+  position: relative;
+  height: 3rem; 
+  border: 1px solid transparent;
+  }
+    .btn:disabled, .iconbutton:disabled {
       cursor: not-allowed; }
-      .btn:disabled:hover, .iconbutton:disabled:hover, .inlinebutton:disabled:hover {
-        background-color: inherit; }
+      .btn:disabled:hover, .iconbutton:disabled:hover {
+        background-color: inherit; 
+    }
+  .btn.warning:hover, .iconbutton.warning:hover {
+      opacity: 100%;
+      background-color: var(--error-light);;
+      color: var(--off-white); 
+  }
+  .btn:hover, .iconbutton:hover {
+      opacity: 80%;
+      color: var(--body);
+  }
   
   .btn {
     height: 2.3rem; }
-    .btn:hover {
-      background-color: #EFDDC8; }
-    .btn:active {
-      background-color: #af5807; }
-    .btn--fill {
-      background-color: #F2EADF; }
-    .btn--empty {
-      border: 1px solid #776B5E;
-      color: #776B5E; }
-    .btn--warning {
-      color: #973618;
-      border: 1px solid #973618; }
-      .btn--warning:hover {
-        background-color: #eb8c6f;
-        color: #FFFCF8; }
   
   .CTA {
     height: 3rem;
     min-width: 6rem;
     border-radius: 50%;
-    font-weight: bold; }
-    .CTA--fill {
-      border: 1px solid #433D37; }
-    .CTA--active {
-      border: 1px solid #af5807; }
-  
+    font-weight: bold !important; 
+  }
+  .CTA.neutral{
+    border: 1.5px solid var(--sand3);
+  }
+  .CTA.highlight{
+    border: 1.5px solid var(--acc1-dark);
+  }
+  .CTA.lowlight{
+    border: 1.5px solid var(--acc2-dark);
+  }
+  .CTA.bright{
+    border: 1.5px solid var(--acc1-dark);
+  }
+
   .iconbutton {
     height: 3rem; }
   
-  .inlinebutton {
-    height: 2.3rem; }
-
-    .icon {
+  .icon {
       font-size: 1.1rem;
-      color: #776B5E;
+      line-height: 0;
       cursor: pointer;
       transition: all 0.35s; }
       .icon:hover {
-        color: #312F2C; }
+        color: var(--body); 
+    }

@@ -13,7 +13,7 @@ var _Button = _interopRequireDefault(require("../btn/Button"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Footer = (_ref) => {
+const Footer = _ref => {
   let {
     primary,
     secondary

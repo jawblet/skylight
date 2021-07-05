@@ -44,7 +44,7 @@ const Textarea = (props) => {
 
 Textarea.propTypes = {
     /** Textarea label */ 
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     /** If the textarea is inline */ 
     inline: PropTypes.bool,
     /** Failed state */ 
@@ -54,13 +54,13 @@ Textarea.propTypes = {
     /** Name */
     name: PropTypes.string,
     /** Value */
-    name: PropTypes.string,
+    value: PropTypes.string,
     /** Placeholder */
     placeholder: PropTypes.string,
     /** Disabled state */ 
     disabled: PropTypes.bool,
     /** Read-only state */ 
-    fail: PropTypes.bool,
+    readOnly: PropTypes.bool,
     /** Function to call onClick*/
     handleClick: PropTypes.func,
     /** Function to call onBlur*/
@@ -71,6 +71,8 @@ Textarea.propTypes = {
     handleChange: PropTypes.func,
     /** Custom classname */ 
     className: PropTypes.string,
+    /** Width */
+    width: PropTypes.string,
     /** Custom styles */ 
     style: PropTypes.object,
 }

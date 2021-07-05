@@ -1,0 +1,17 @@
+.banner {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1rem; }
+    .banner--error {
+      background-color: var(--error-light);
+      border: 1px solid var(--error);
+      color: var(--off-white); }
+    .banner--info {
+      background-color: var(--body-medium);
+      border: 1px solid var(--body);
+      color: var(--off-white); }
+    .banner--success {
+      background-color: var(--acc1-light);
+      color: var(--body);
+      border: 1px solid var(--acc1-dark);
+}

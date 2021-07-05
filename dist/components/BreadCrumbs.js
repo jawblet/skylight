@@ -11,7 +11,7 @@ var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const BreadCrumbs = (_ref) => {
+const BreadCrumbs = _ref => {
   let {
     crumbs
   } = _ref;

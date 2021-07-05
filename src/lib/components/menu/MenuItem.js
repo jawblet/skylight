@@ -5,7 +5,8 @@ import './Menu.css';
 
 const Item = (props) => { 
     return (
-        <li className={`menu__item 
+        <li className={`
+            ${props.nav ? 'nav__item' : 'menu__item'}
             ${props.dropdown ? 'menu__item--dropdown' :''} 
             ${props.active ? 'menu__item--active' :''} `} 
             onClick={props.handleClick} 
@@ -19,7 +20,7 @@ const Item = (props) => {
 
 const MenuItem = (props) => {
     if(props.nav) {
-        return ( <NavLink to={props.path} activeClassName="menu__item--active">
+        return ( <NavLink to={props.path} activeClassName="nav__item--active">
             <Item {...props}/>
         </NavLink>
         )

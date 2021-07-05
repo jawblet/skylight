@@ -1,0 +1,15 @@
+
+.paginate {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 1rem; }
+    .paginate__L {
+      position: absolute;
+      left: 0; }
+    .paginate__R {
+      position: absolute;
+      right: 0; 
+}
