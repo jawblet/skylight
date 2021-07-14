@@ -1,0 +1,22 @@
+.modal {
+    border-radius: 1rem;
+    background-color: #FFFCF8;
+    display: flex;
+    direction: column;
+    justify-content: center;
+    box-shadow: 4px 4px 16px #ebe9e5, -4px -4px 16px #ffffff;
+    padding: 1.5rem 3rem;
+  }
+    .modal__X {
+      position: relative;
+      right: 0;
+      align-self: flex-end; 
+    }
+    .modal__background {
+      left: 0;
+      top: 0;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(235, 233, 229, 0.75);
+    }

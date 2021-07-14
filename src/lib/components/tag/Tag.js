@@ -6,7 +6,7 @@ import "../_global.css";
 
 const Tag = (props) => { 
     return (
-        <div className={`tag ${props.style ? props.style : ""}`} 
+        <div className={`tag ${props.kind ?? ""} ${props.className ?? ""}`} 
             style={{backgroundColor:props.bg, color: props.color }}> 
             {props.children}
             {props.chip &&  
@@ -30,10 +30,12 @@ Tag.propTypes = {
     chip: PropTypes.bool,
     /** Function to call onClick */
     handleClick: PropTypes.func,
+    /** Custom classname */
+    className: PropTypes.string,
 }
 
 Tag.defaultProps = {
-    style: 'neutral'
+    kind: 'neutral'
 }
 
 export default Tag;

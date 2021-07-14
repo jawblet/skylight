@@ -17,12 +17,17 @@
     }
   .btn.warning:hover, .iconbutton.warning:hover {
       opacity: 100%;
-      background-color: var(--error-light);;
+      background-color: var(--red-l);;
       color: var(--off-white); 
   }
   .btn:hover, .iconbutton:hover {
       opacity: 80%;
       color: var(--body);
+  }
+
+  .btn.inline:hover, 
+  .iconbutton.inline:hover {
+    background-color: var(--sand2);
   }
   
   .btn {
@@ -38,13 +43,13 @@
     border: 1.5px solid var(--sand3);
   }
   .CTA.highlight{
-    border: 1.5px solid var(--acc1-dark);
+    border: 1.5px solid var(--forest);
   }
   .CTA.lowlight{
-    border: 1.5px solid var(--acc2-dark);
+    border: 1.5px solid var(--purple);
   }
   .CTA.bright{
-    border: 1.5px solid var(--acc1-dark);
+    border: 1.5px solid var(--forest);
   }
 
   .iconbutton {
@@ -58,3 +63,5 @@
       .icon:hover {
         color: var(--body); 
     }
+
+  

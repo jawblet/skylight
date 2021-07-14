@@ -1,6 +1,6 @@
 {
-  "name": "skylight-react",
-  "version": "0.9.4",
+  "name": "skylight-react", 
+  "version": "1.0.0",
   "author": "Julia Bell",
   "description": "React component library",
   "keywords": [

@@ -10,7 +10,7 @@ const Button = (props) => {
                     ${props.CTA ? `CTA CTA--${props.kind}` : ''}
                     ${props.className}`}
                 data-id={props.id} 
-                name={props.name}
+                name={props.name}  
                 value={props.value} 
                 disabled={props.disabled}
                 onClick={props.handleClick}
@@ -38,7 +38,7 @@ Button.propTypes = {
     /** Custom classname */ 
     className: PropTypes.string,
     /** Custom styles */ 
-    style: PropTypes.object,
+    style: PropTypes.object
 }
 
 Button.defaultProps = {

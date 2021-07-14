@@ -8,13 +8,38 @@
     --body-medium: #433D37;
     --body-light: #776B5E;
     --body-lightest: #C7BEB6;
-    --error: #973618;
-    --error-light: #eb8c6f;
-    --acc1-light: #86DFB0;
-    --acc1-dark: #337453;
-    --acc2-light: #BCB6EA;
-    --acc2-dark: #565898;
-    --bright: #D0EE53;
+
+    --brown: #56230E;
+    --brown-l:#C3A67B; 
+    --brown-h: #724F1D;
+    --red: #973618;
+    --red-l: #eb8c6f;
+    --red-h: #C7501C;
+    --orange: #CC6B2C;
+    --orange-l: #FEC889;
+    --orange-h: #FFA657;
+    --yellow: #F2CC60;
+    --yellow-l: #F8E3A1;
+    --yellow-h: #FDFA54;
+    --green: #B3D5A7;
+    --green-l: #C7E5D5; 
+    --green-h: #D2FF11;
+    --forest: #337453;
+    --forest-l: #DBE4B6;
+    --forest-h: #86DFB0;
+    --blue: #143D79;
+    --blue-l: #A7B3D1;
+    --blue-h: #94E6F1;
+    --purple: #565898;
+    --purple-l: #CCCDE9;
+    --purple-h: #BCB6EA;
+    --eggplant: #401E6C;
+    --eggplant-l: #CDB6EB;
+    --eggplant-h: #B38CE4;
+    --pink: #E69DD6;
+    --pink-l: #F9E0F4;
+    --pink-h: #FFAAD8;
+
     --shadow: #ebe9e5; 
     --soft-shadow: 4px 4px 16px #ebe9e5, -4px -4px 16px #fff; 
     --h1: 1.8rem;
@@ -50,9 +75,18 @@ html {
     font-size: 90%;
 }
 
-code {
-    font-family: Consolas, monaco, monospace;
-    font-size: 80%;
+code, pre {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px; 
+}
+
+pre {
+    white-space: pre-wrap;
+	word-spacing: normal;
+	word-break: break-word;
+	word-wrap: normal;
+	line-height: 1.5;
 }
 
 h1 {
@@ -72,7 +106,7 @@ h3 {
     letter-spacing: 0.5px; 
 }
   
-h4, button {
+h4, button, .tab {
     font-family: 'Graphik', sans-serif;
     text-transform: uppercase;
     font-size:  var(--h4);
@@ -165,13 +199,13 @@ hr {
 
 /** custom styles */
 .highlight {
-    background-color: var(--acc1-light);
-    color: var(--acc1-dark);
+    background-color: var(--forest-h);
+    color: var(--forest);
 }
 
 .lowlight {
-    background-color: var(--acc2-light);
-    color: var(--acc2-dark);
+    background-color: var(--purple-h);
+    color: var(--purple);
 }
 
 .neutral {
@@ -180,8 +214,8 @@ hr {
 }
 
 .bright {
-    background-color: var(--bright);
-    color: var(--acc1-dark);
+    background-color: var(--green-h);
+    color: var(--forest);
 }
  
 .dark {
@@ -195,8 +229,8 @@ hr {
 }
 
 .warning {
-    color: var(--error);
-    border: 1px solid var(--error);
+    color: var(--red);
+    border: 1px solid var(--red);
 }
 
 .error {

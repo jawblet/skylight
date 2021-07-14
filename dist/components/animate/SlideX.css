@@ -1,0 +1,41 @@
+/** Rollout X */
+.rollOutX-enter {
+    transform: translateX(100%); }
+  
+.rollOutX-enter-active {
+    transform: translateX(0);
+    transition: transform 0.35s ease-in-out; }
+  
+.rollOutX-enter-done {
+    transform: translateX(0); }
+  
+.rollOutX-exit {
+    transform: translateX(0); }
+  
+.rollOutX-exit-active {
+    transform: translateX(100%);
+    transition: transform 0.35s ease-in-out; }
+  
+.rollOutX-exit-done {
+    transform: translateX(100%); }
+  
+.rollOutNegX-enter {
+    transform: translateX(100%); }
+  
+.rollOutNegX-enter-active {
+    transform: translateX(0);
+    transition: transform 0.35s cubic-bezier(0.12, 0, 0.39, 0); }
+  
+.rollOutNegX-enter-done {
+    transform: translateX(0); }
+  
+.rollOutNegX-exit {
+    transform: translateX(0); }
+  
+.rollOutNegX-exit-active {
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.12, 0, 0.39, 0); }
+  
+.rollOutNegX-exit-done {
+    transform: translateX(100%); }
+  

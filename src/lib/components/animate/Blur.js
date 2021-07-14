@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'; 
 import { CSSTransition } from 'react-transition-group';
-
+import './Blur.css';
 
 const Blur = (props) => {
     const nodeRef = useRef(null);

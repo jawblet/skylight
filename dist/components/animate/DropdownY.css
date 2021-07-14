@@ -1,0 +1,23 @@
+/** Dropdown Y */
+.dropdownY-enter {
+    transform: rotateX(-90deg); }
+  
+.dropdownY-enter-active {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    transition: transform 0.35s ease-in-out; }
+  
+.dropdownY-enter-done {
+    transform: rotateX(0deg); }
+  
+.dropdownY-exit {
+    transform: rotateX(0deg); }
+  
+.dropdownY-exit-active {
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    transition: transform 0.35s ease-in-out; }
+  
+.dropdownY-exit-done {
+    transform: rotateX(-90deg); }
+  

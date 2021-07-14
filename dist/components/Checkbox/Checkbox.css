@@ -1,0 +1,33 @@
+
+.checkbox--small {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--body);
+    border-radius: 3px; 
+  }
+  
+  .checkbox--big {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1.5px solid var(--body);
+    border-radius: 3px; 
+  }
+  
+  .checkbox--hidden {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0; }
+    .checkbox--hidden:checked ~ .checkbox--visible {
+      background-color: var(--body); }
+    .checkbox--hidden:disabled {
+      cursor: not-allowed; }
+      .checkbox--hidden:disabled ~ .checkbox--visible {
+        background-color: var(--body-lightest); }
+  
+  .checkbox--visible {
+    background-color: transparent;
+    transition: all 0.35s; }
+  
+  .checkbox__label {
+    padding-left: 1rem; 
+  }

@@ -21,8 +21,8 @@
     .toggle::after {
       transform: translate(0, -50%); }
     .toggle--on {
-      background-color: var(--acc1-light);
-      border-color: var(--acc1-light);
+      background-color: var(--forest-h);
+      border-color: var(--forest-h);
       justify-content: flex-end; }
       .toggle--on.toggle::after {
         transform: translate(115%, -50%); 

@@ -1,0 +1,20 @@
+.tabs {
+    width: 100%;
+    border-bottom: 3px solid var(--sand2);
+}
+
+.tab {
+    border-bottom: 3px solid var(--sand2);
+    transition: all 0.35s;
+    min-width: 6rem;
+}
+
+.tab--active {
+    color: var(--forest);
+    border-color: var(--forest); 
+}
+
+.tab:hover {
+    color: var(--forest-h);
+    background-color: var(--sand);
+}

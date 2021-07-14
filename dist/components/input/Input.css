@@ -11,9 +11,9 @@
       border: 3px solid transparent;
       padding-left: 0; }
     .input--fail {
-      border: 3px solid var(--error-light); }
+      border: 3px solid var(--red-l); }
       .input--fail:focus {
-        border: 3px solid var(--error); }
+        border: 3px solid var(--red); }
     .input::placeholder {
       color: var(--body-lightest); }
     .input:disabled {

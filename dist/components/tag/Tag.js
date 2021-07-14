@@ -18,8 +18,10 @@ require("../_global.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Tag = props => {
+  var _props$kind, _props$className;
+
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "tag ".concat(props.style ? props.style : ""),
+    className: "tag ".concat((_props$kind = props.kind) !== null && _props$kind !== void 0 ? _props$kind : "", " ").concat((_props$className = props.className) !== null && _props$className !== void 0 ? _props$className : ""),
     style: {
       backgroundColor: props.bg,
       color: props.color
@@ -50,10 +52,13 @@ Tag.propTypes = {
   chip: _propTypes.PropTypes.bool,
 
   /** Function to call onClick */
-  handleClick: _propTypes.PropTypes.func
+  handleClick: _propTypes.PropTypes.func,
+
+  /** Custom classname */
+  className: _propTypes.PropTypes.string
 };
 Tag.defaultProps = {
-  style: 'neutral'
+  kind: 'neutral'
 };
 var _default = Tag;
 exports.default = _default;

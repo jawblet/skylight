@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
-
+import './Fade.css';
 
 const Fade = (props) => {
     const nodeRef = useRef(null);

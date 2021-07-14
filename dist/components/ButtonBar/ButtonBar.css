@@ -1,0 +1,44 @@
+.buttonbar {
+    display: inline-flex;
+    position: relative;
+    background-color: #F2EADF;
+    border-radius: 0.5rem; 
+}
+
+.buttonbar button {
+    border-radius: 0; 
+}
+
+.buttonbar--column {
+    flex-direction: column; 
+}
+
+/*
+.buttonbar--column > div:first-of-type > button:first-of-type {
+    border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem; 
+}
+
+.buttonbar--column > div:last-of-type > button:last-of-type {
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+}
+
+.buttonbar--row > div:first-of-type > button:first-of-type {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+}
+      
+.buttonbar--row > div:last-of-type > button:last-of-type {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; 
+}
+*/
+
+.buttonbar--column.buttonbar--divide > *:not(:last-child) {
+    border-bottom: 1px solid #C7BEB6; 
+}
+      
+.buttonbar--row.buttonbar--divide > *:not(:last-child) {
+      border-right: 1px solid #C7BEB6; 
+}

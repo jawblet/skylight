@@ -15,11 +15,11 @@
 
 .menu__item:hover {
     color: var(--body);
-    background-color: var(--acc1-light); 
+    background-color: var(--forest-h); 
 }
 
 .menu__item--active {
-  background-color: var(--bright); 
+  background-color: var(--green-h); 
   color: var(--body);
 }
 

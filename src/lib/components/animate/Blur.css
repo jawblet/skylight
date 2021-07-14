@@ -1,0 +1,23 @@
+.blur-enter {
+    transform: scale(1);
+    filter: blur(0.5rem); }
+  
+.blur-enter-active {
+    transform: scale(0.99);
+    filter: blur(1rem);
+    transition: all 0.15s ease-in-out; }
+  
+.blur-enter-done {
+    transform: scale(1); }
+  
+.blur-exit {
+    transform: scale(1);
+    filter: blur(0.5rem); }
+  
+.blur-exit-active {
+    transform: scale(0.99);
+    filter: blur(1rem);
+    transition: all 0.15s ease-in-out; }
+  
+.blur-exit-done {
+    transform: scale(1); }

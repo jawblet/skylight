@@ -2,16 +2,21 @@
 import Menu from './lib/components/Menu/Menu.js';
 import MenuItem from './lib/components/Menu/MenuItem.js';
 import Toggle from './lib/components/Toggle/Toggle';
-import { Loader, Button, IconButton, Textarea, Input, Banner } from './lib/index.js';
+import { Loader, Button, IconButton, Textarea, Input, Banner, Modal, Checkbox } from './lib/index.js';
 import './lib/skylight.css';
 import Flex from './lib/components/layout/Flex';
 import { VscUnmute } from 'react-icons/vsc';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Tabs from './lib/components/Tabs/Tabs';
+import Tab from './lib/components/Tabs/Tab';
+import { useState } from 'react';
 
 function App() {
+  const [tab, setTab] = useState(0);
+
+  const tabs = ["acne", "axel", "apc"];
+
   return (
     <div className="App">
-      <Router>
       <h1>test!!</h1>
       <Menu>
         <MenuItem>
@@ -49,9 +54,9 @@ function App() {
   <Input/>
   <Textarea/>
   <Banner text="HEY!!!!!" type="info" in={true}/>
-      </Router>
-     
-    </div>
+  <Checkbox label="fuck"/>
+
+ </div>
   );
 }
 
