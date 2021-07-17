@@ -9,13 +9,14 @@ require("core-js/modules/web.dom-collections.iterator.js");
 
 var _react = require("react");
 
-function useDetect(initState) {
+function useDetect(onClose) {
   const nodeRef = (0, _react.useRef)(null);
-  const [show, setShow] = (0, _react.useState)(initState || false);
+  const [show, setShow] = (0, _react.useState)(false);
 
   const handleClickOutside = event => {
     //if modal is open and click is outside modal, close it 
     if (nodeRef.current && !nodeRef.current.contains(event.target)) {
+      !!onClose && onClose();
       return setShow(false);
     }
   };

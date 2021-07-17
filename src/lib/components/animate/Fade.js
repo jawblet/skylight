@@ -1,23 +1,26 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './Fade.css';
+import { PropTypes } from 'prop-types';
 
 const Fade = (props) => {
-    const nodeRef = useRef(null);
-
     return (
         <CSSTransition in={props.in} 
                         timeout={props.short ? 150 : 350} 
-                        nodeRef={nodeRef} 
                         classNames="fade"
                         exit={props.exit} 
                         enter={props.enter} 
                         unmountOnExit>
-                <div ref={nodeRef}> 
                     {props.children}
-                </div>
         </CSSTransition>
     );
+}
+
+Fade.propTypes = {
+    /** When the transition comes in */
+    in: PropTypes.bool.isRequired,
+    /** Component children */
+    children: PropTypes.node.isRequired
 }
  
 export default Fade;

@@ -33,7 +33,7 @@ Button.propTypes = {
   label: _propTypes.default.string.isRequired,
 
   /** Kind of button style */
-  kind: _propTypes.default.oneOf(['highlight', 'lowlight', 'bright', 'neutral', 'empty', 'warning']),
+  kind: _propTypes.default.oneOf(['highlight', 'lowlight', 'bright', 'neutral', 'inline', 'warning']),
 
   /** Function of button */
   type: _propTypes.default.oneOf(["button", "submit", "reset"]),

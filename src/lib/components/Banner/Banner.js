@@ -4,6 +4,8 @@ import { PropTypes } from 'prop-types';
 import './Banner.css';
 import '../_global.css';
 
+// position abs in a few places 
+
 const Banner = (props) => {
     const [show, setShow] = useState(false);
 
@@ -18,13 +20,13 @@ const Banner = (props) => {
         <>
        {show &&
             <div className={`banner banner--${props.type}`} style={props.style}>
-            <h5>{props.text}</h5>
+                <h5>{props.text}</h5>
             </div>
         }
        </>
     );
 }
-
+ 
 Banner.propTypes = {
     /** Trigger banner entry */
     in: PropTypes.bool.isRequired,

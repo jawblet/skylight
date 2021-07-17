@@ -1,22 +1,26 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { CSSTransition } from 'react-transition-group'; 
 import './SlideX.css';
+import { PropTypes } from 'prop-types';
 
-const Slide = (props) => {
-    const nodeRef = useRef(null);
+const SlideX = (props) => {
 
     return (  
         <CSSTransition in={props.in} 
             timeout={350} 
-            nodeRef={nodeRef} 
             classNames="rollOutX" 
             unmountOnExit
             > 
-            <div ref={nodeRef}>
-                {props.children}
-            </div>
+            {props.children}
         </CSSTransition>
     );
 }
+
+SlideX.propTypes = {
+    /** When the transition comes in */
+    in: PropTypes.bool.isRequired,
+    /** Component children */
+    children: PropTypes.node.isRequired
+}
  
-export default Slide;
+export default SlideX;

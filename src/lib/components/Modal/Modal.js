@@ -1,4 +1,4 @@
-import React, { useEffect, forwardRef } from 'react';
+import React, { useEffect } from 'react';
 import { VscClose } from 'react-icons/vsc'; 
 import Flex from '../layout/Flex';
 import './Modal.css';
@@ -6,12 +6,7 @@ import '../_global.css';
 import { PropTypes } from 'prop-types'; 
 import useDetectClick from './useDetectClick';
 
-//callback on close 
 const Modal = (props) => {
-
-    const backgroundZIndex = {
-        zIndex: props.backgroundZIndex
-    }
 
     const modalStyle = {
         zIndex: props.zIndex,
@@ -23,10 +18,14 @@ const Modal = (props) => {
         width: props.width
     }
 
+    const backgroundZIndex = {
+        zIndex: props.backgroundZIndex
+    }
+
     const { 
         nodeRef, 
         show, 
-        setShow } = useDetectClick();
+        setShow } = useDetectClick(props.onClose);
     
     useEffect(() => {
         if(props.open) {
@@ -35,12 +34,11 @@ const Modal = (props) => {
         setShow(false);
     }, [props.open]);
 
-    useEffect(() => {
+    useEffect(() => { 
         document.body.style.overflow = 'hidden';
-        props.onOpen && props.onOpen();
+        !!props.onOpen && props.onOpen();
         return () => {
             document.body.style.overflow = 'auto';
-            props.onClose && props.onClose();
         }
     }, []);
 
@@ -50,9 +48,13 @@ const Modal = (props) => {
         <div className={`modal ${props.className ?? ""}`} ref={nodeRef}> 
         <Flex column gap={1.5} width="100%"> 
             {props.showCloseButton && 
-            <div onClick={() => setShow(false)} style={{alignSelf:"flex-end"}}>
-                <VscClose className="icon modal__X"/>
-            </div>}
+                <div onClick={() => { 
+                    !!props.onClose && props.onClose();
+                    setShow(false) }
+                } 
+                    style={{alignSelf:"flex-end"}}>
+                    <VscClose className="icon modal__X"/>
+                </div>}
             {props.children}
         </Flex>
     </div>
@@ -67,6 +69,10 @@ Modal.propTypes = {
     open: PropTypes.bool.isRequired,
     /** The modal contents */
     children: PropTypes.node.isRequired,
+    /** Z-index of the modal */
+    zIndex: PropTypes.number,
+    /** Z-index of the modal background*/
+    backgroundZIndex: PropTypes.number,
     /** The modal width */
     width: PropTypes.oneOfType([
             PropTypes.string,

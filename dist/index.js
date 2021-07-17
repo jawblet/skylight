@@ -129,6 +129,12 @@ Object.defineProperty(exports, "Toggle", {
     return _Toggle.default;
   }
 });
+Object.defineProperty(exports, "Tooltip", {
+  enumerable: true,
+  get: function get() {
+    return _Tooltip.default;
+  }
+});
 Object.defineProperty(exports, "Paginate", {
   enumerable: true,
   get: function get() {
@@ -213,6 +219,8 @@ var _Tab = _interopRequireDefault(require("./components/Tabs/Tab"));
 var _Textarea = _interopRequireDefault(require("./components/Input/Textarea"));
 
 var _Toggle = _interopRequireDefault(require("./components/Toggle/Toggle"));
+
+var _Tooltip = _interopRequireDefault(require("./components/Tooltip/Tooltip"));
 
 var _Paginate = _interopRequireDefault(require("./components/Paginate/Paginate"));
 

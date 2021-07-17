@@ -24,7 +24,7 @@ Button.propTypes = {
     /** Button label */ 
     label: PropTypes.string.isRequired,
     /** Kind of button style */
-    kind: PropTypes.oneOf(['highlight', 'lowlight', 'bright', 'neutral', 'empty', 'warning']),
+    kind: PropTypes.oneOf(['highlight', 'lowlight', 'bright', 'neutral', 'inline', 'warning']),
     /** Function of button */
     type: PropTypes.oneOf(["button", "submit", "reset"]),
     /** CTA (Call To Action) buttons that prompt big actions have a rounder style */

@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
  
-export default function useDetect(initState) {
+export default function useDetect(onClose) {
     const nodeRef = useRef(null);
     
-    const [show, setShow] = useState(initState || false); 
+    const [show, setShow] = useState(false); 
    
     const handleClickOutside = event => {
       //if modal is open and click is outside modal, close it 
         if(nodeRef.current && !nodeRef.current.contains(event.target)) {
+          !!onClose && onClose();
           return setShow(false);
         }
       };

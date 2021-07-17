@@ -17,14 +17,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Tab = props => {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "tab padS pointer ".concat(props.active ? 'tab--active' : ''),
-    onClick: props.handleClick
+    className: "tab padS pointer ".concat(props.active ? 'tab--active' : '', " \n                            ").concat(props.className && props.className),
+    onClick: props.handleClick,
+    "data-id": props.id
   }, props.children);
 };
 
 Tab.propTypes = {
-  /** Id used to set the active tab */
-  id: _propTypes.PropTypes.node,
+  /** Id */
+  id: _propTypes.PropTypes.oneOfType([_propTypes.PropTypes.string, _propTypes.PropTypes.number]),
 
   /** Active state */
   active: _propTypes.PropTypes.bool,
@@ -33,7 +34,13 @@ Tab.propTypes = {
   handleClick: _propTypes.PropTypes.func,
 
   /** Component children */
-  children: _propTypes.PropTypes.node.isRequired
+  children: _propTypes.PropTypes.node.isRequired,
+
+  /** Custom className */
+  className: _propTypes.PropTypes.string,
+
+  /** Custom styles */
+  style: _propTypes.PropTypes.object
 };
 var _default = Tab;
 exports.default = _default;

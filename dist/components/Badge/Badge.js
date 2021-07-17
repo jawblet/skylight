@@ -9,11 +9,9 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _propTypes = require("prop-types");
 
 require("./Badge.css");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -30,13 +28,13 @@ const Badge = /*#__PURE__*/(0, _react.forwardRef)((props, ref) => {
 });
 Badge.propTypes = {
   /** Custom classname */
-  className: _propTypes.default.string,
+  className: _propTypes.PropTypes.string,
 
   /** Function to call onClick*/
-  handleClick: _propTypes.default.func,
+  handleClick: _propTypes.PropTypes.func,
 
   /** Number to display in badge */
-  value: _propTypes.default.number
+  value: _propTypes.PropTypes.number
 };
 Badge.defaultProps = {
   value: 0

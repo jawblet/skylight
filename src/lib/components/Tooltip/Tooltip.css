@@ -1,0 +1,26 @@
+.tltp {
+    padding: 5px;
+    color: var(--off-white);
+    background-color: var(--body-medium);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 3;
+    white-space: nowrap; }
+    .tltp--top {
+      left: 50%;
+      bottom: 100%;
+      transform: translate(-50%, -1rem); }
+    .tltp--bottom {
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, 1rem); }
+    .tltp--right {
+      left: 100%;
+      top: 50%;
+      transform: translate(1rem, -50%); }
+    .tltp--left {
+      right: 100%;
+      top: 50%;
+      transform: translate(-1rem, -50%); 
+}
+  

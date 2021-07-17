@@ -1,22 +1,24 @@
-import React, { useRef } from 'react'; 
+import React from 'react'; 
 import { CSSTransition } from 'react-transition-group';
 import './Blur.css';
+import { PropTypes } from 'prop-types';
 
 const Blur = (props) => {
-    const nodeRef = useRef(null);
     return (
             <CSSTransition in={props.in} 
                 timeout={150} 
                 classNames="blur" 
-                nodeRef={nodeRef}
                 unmountOnExit> 
-                <div ref={nodeRef}>
                     {props.children}
-                </div>
             </CSSTransition>
-
-
     );
+}
+
+Blur.propTypes = {
+    /** When the transition comes in */
+    in: PropTypes.bool.isRequired,
+    /** Component children */
+    children: PropTypes.node.isRequired
 }
  
 export default Blur;

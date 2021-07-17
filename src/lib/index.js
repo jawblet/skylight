@@ -20,6 +20,7 @@ import Tabs from './components/Tabs/Tabs';
 import Tab from './components/Tabs/Tab';
 import Textarea from './components/Input/Textarea';
 import Toggle from './components/Toggle/Toggle';
+import Tooltip from './components/Tooltip/Tooltip';
 import Paginate from './components/Paginate/Paginate';
 
 //animate
@@ -55,6 +56,7 @@ export { Accordion,
         Tag,
         Textarea,
         Toggle,
+        Tooltip,
 
         Fade,
         Blur,
@@ -64,8 +66,3 @@ export { Accordion,
         Flex,
         Grid,
      };
-
-/*
-
-
-*/

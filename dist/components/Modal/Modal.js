@@ -27,13 +27,9 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-//callback on close 
 const Modal = props => {
   var _props$className;
 
-  const backgroundZIndex = {
-    zIndex: props.backgroundZIndex
-  };
   const modalStyle = {
     zIndex: props.zIndex,
     position: 'fixed',
@@ -43,11 +39,14 @@ const Modal = props => {
     height: props.height,
     width: props.width
   };
+  const backgroundZIndex = {
+    zIndex: props.backgroundZIndex
+  };
   const {
     nodeRef,
     show,
     setShow
-  } = (0, _useDetectClick.default)();
+  } = (0, _useDetectClick.default)(props.onClose);
   (0, _react.useEffect)(() => {
     if (props.open) {
       return setShow(true);
@@ -57,10 +56,9 @@ const Modal = props => {
   }, [props.open]);
   (0, _react.useEffect)(() => {
     document.body.style.overflow = 'hidden';
-    props.onOpen && props.onOpen();
+    !!props.onOpen && props.onOpen();
     return () => {
       document.body.style.overflow = 'auto';
-      props.onClose && props.onClose();
     };
   }, []);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, show && /*#__PURE__*/_react.default.createElement("div", {
@@ -76,7 +74,10 @@ const Modal = props => {
     gap: 1.5,
     width: "100%"
   }, props.showCloseButton && /*#__PURE__*/_react.default.createElement("div", {
-    onClick: () => setShow(false),
+    onClick: () => {
+      !!props.onClose && props.onClose();
+      setShow(false);
+    },
     style: {
       alignSelf: "flex-end"
     }
@@ -91,6 +92,12 @@ Modal.propTypes = {
 
   /** The modal contents */
   children: _propTypes.PropTypes.node.isRequired,
+
+  /** Z-index of the modal */
+  zIndex: _propTypes.PropTypes.number,
+
+  /** Z-index of the modal background*/
+  backgroundZIndex: _propTypes.PropTypes.number,
 
   /** The modal width */
   width: _propTypes.PropTypes.oneOfType([_propTypes.PropTypes.string, _propTypes.PropTypes.number]),

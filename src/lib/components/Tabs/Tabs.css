@@ -7,6 +7,8 @@
     border-bottom: 3px solid var(--sand2);
     transition: all 0.35s;
     min-width: 6rem;
+    text-align: center;
+    flex: 1 0 auto; 
 }
 
 .tab--active {
