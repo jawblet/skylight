@@ -232,8 +232,8 @@ var _DropdownY = _interopRequireDefault(require("./components/animate/DropdownY"
 
 var _SlideX = _interopRequireDefault(require("./components/animate/SlideX"));
 
-var _Flex = _interopRequireDefault(require("./components/layout/Flex"));
+var _Flex = _interopRequireDefault(require("./components/Flex/Flex"));
 
-var _Grid = _interopRequireDefault(require("./components/layout/Grid"));
+var _Grid = _interopRequireDefault(require("./components/Grid/Grid"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

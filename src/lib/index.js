@@ -30,8 +30,8 @@ import DropdownY from './components/animate/DropdownY';
 import SlideX from './components/animate/SlideX';
 
 //layout 
-import Flex from './components/layout/Flex';
-import Grid from './components/layout/Grid';
+import Flex from './components/Flex/Flex';
+import Grid from './components/Grid/Grid';
 
 
 export { Accordion,
